@@ -1,10 +1,10 @@
 {
-  "name": "steel-studio",
+  "name": "yateractives",
   "private": true,
   "version": "1.0.2",
   "description": "",
   "main": "package.json",
-  "author": "Jacob Stordahl <jacob@stordahl.dev>",
+  "author": "Derrick Snow Jr",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -26,7 +26,8 @@
     "prop-types": "^15.6",
     "react": "^17.0",
     "react-barcode": "^1.3.2",
-    "react-dom": "^17.0"
+    "react-dom": "^17.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@sanity/cli": "^1.150.1"
