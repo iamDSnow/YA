@@ -10,10 +10,13 @@ import product from './product'
 import productVariant from './productVariant'
 import social from './social'
 import siteSettings from './siteSettings'
+import hero from './hero'
+import home from './home'
 
 import localeString from './locale/String'
 import localeText from './locale/Text'
 import localeBlockContent from './locale/BlockContent'
+import pic from './locale/pic'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -34,6 +37,10 @@ export default createSchema({
     localeString,
     productVariant,
     social,
-    siteSettings
+    siteSettings,
+    pic,
+    hero,
+    home
+
   ])
 })
