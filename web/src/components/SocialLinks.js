@@ -6,10 +6,13 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 const IconsWrap = styled.div`
+
+	
 	width: 100%;
 	margin: auto;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	& > * {
 		margin: .25rem;
 	}
@@ -18,6 +21,11 @@ const IconsWrap = styled.div`
 	}
 `;
 
+const Icons = styled(FontAwesomeIcon)`
+color: #fff;
+
+
+`
 library.add(fab);
 
 const SocialLinks = () => {
@@ -42,7 +50,7 @@ const SocialLinks = () => {
 			{linksArr.map((elem) => {
 				return (
 					<a href={elem.link} key={elem._key} aria-label={elem.name}>
-						<FontAwesomeIcon icon={[ 'fab', elem.icon ]} size="lg" alt={elem.name} />
+						<Icons icon={[ 'fab', elem.icon ]} size="lg" alt={elem.name} />
 					</a>
 				);
 			})}

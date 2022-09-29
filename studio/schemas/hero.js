@@ -7,7 +7,6 @@ export default {
             name: 'heroPic',
             title: 'Hero Pic',
             type: 'pic',
-        },
-        
+        },  
     ],
 }

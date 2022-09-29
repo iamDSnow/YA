@@ -12,6 +12,24 @@ export default {
             validation: Rule => Rule.required()
         },
         {
+            name: "cannonicalLink",
+            title: "Cannonical Link",
+            type: "url",
+            description: "Website Domain Name",
+          },
+        {
+            name: "logo",
+            title: "Company Logo",
+            type: "pic",
+            description: "Company Logo Will Be Populated Throughout The Site",
+          },
+          {
+            name: "companyName",
+            title: "Company Name",
+            type: "string",
+            description: "Business DBA",
+          },
+        {
             title: 'Email',
             name: 'email',
             type: 'string'
@@ -26,6 +44,7 @@ export default {
           name: 'socialLinks',
           type: 'array',
           of: [{type: 'social'}]
-        }
+        },
+        
     ]
 }

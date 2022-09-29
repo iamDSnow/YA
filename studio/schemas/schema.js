@@ -12,12 +12,15 @@ import social from './social'
 import siteSettings from './siteSettings'
 import hero from './hero'
 import home from './home'
+import header from './header'
 
 import localeString from './locale/String'
 import localeText from './locale/Text'
 import localeBlockContent from './locale/BlockContent'
 import pic from './locale/pic'
-
+import linkOptions from './locale/linkOptions'
+import productFeatureCard from './locale/productFeatureCard'
+import productCardArray from './productCardArray'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -40,7 +43,12 @@ export default createSchema({
     siteSettings,
     pic,
     hero,
-    home
+    home,
+    linkOptions,
+    header,
+    productFeatureCard,
+    productCardArray
+
 
   ])
 })

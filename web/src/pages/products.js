@@ -40,7 +40,7 @@ export default function Products ({ data }) {
               <ItemThumbnail
                 node={item}
                 key={id}
-                link={'/' + current}
+                link={'/products/' + current}
                 heading={title}
                 image={variants[0].images[0].asset.id}
                 price={variants[0].price}
