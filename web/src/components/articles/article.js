@@ -5,7 +5,13 @@ import { Link } from 'gatsby'
 
 const ArticleWrapper = styled.div`
 padding: 1rem;
-padding-top: 40px;`
+padding-top: 40px;
+@media only screen and (min-width: 900px) {
+  padding: 2rem;
+
+
+  }
+`
 const ArticleH1 = styled.h1`
 font-size: 48px;
 font-weight: 700;
@@ -15,7 +21,11 @@ padding-bottom: 20px;
 const ArticleP = styled.p`
 font-size: 22px;
 padding-bottom: 40px;
+@media only screen and (min-width: 900px) {
+width: 60% ;
 
+
+  }
 
 `
 const BtnCon = styled.div`

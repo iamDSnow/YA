@@ -24,7 +24,12 @@ const IconsWrap = styled.div`
 const Icons = styled(FontAwesomeIcon)`
 color: #fff;
 
+@media only screen and (min-width: 600px) {
 
+    
+height: 50px;
+
+}
 `
 library.add(fab);
 

@@ -5,7 +5,20 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import steel from '../../steel-config'
 const HeroWrapper = styled.div`
-object-fit: cover;`
+object-fit: cover;
+padding-top: 35px;
+@media only screen and (min-width: 600px) {
+  padding-top: 65px;
+    
+
+
+  }
+  @media only screen and (min-width: 900px) {
+  padding-top: 85px;
+    
+
+
+  }`
 
 const ImgCon = styled(GatsbyImage)`
 

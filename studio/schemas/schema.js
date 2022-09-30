@@ -13,6 +13,7 @@ import siteSettings from './siteSettings'
 import hero from './hero'
 import home from './home'
 import header from './header'
+import ingredients from './locale/ingredients'
 
 import localeString from './locale/String'
 import localeText from './locale/Text'
@@ -21,6 +22,10 @@ import pic from './locale/pic'
 import linkOptions from './locale/linkOptions'
 import productFeatureCard from './locale/productFeatureCard'
 import productCardArray from './productCardArray'
+import aboutya from './aboutya'
+import aboutInga from './aboutInga'
+import contactya from './contactya'
+import dualpicText from './dualpicText'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -47,7 +52,12 @@ export default createSchema({
     linkOptions,
     header,
     productFeatureCard,
-    productCardArray
+    productCardArray,
+    ingredients,
+    aboutya,
+    aboutInga,
+    contactya,
+    dualpicText
 
 
   ])

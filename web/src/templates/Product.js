@@ -9,6 +9,14 @@ import Layout from '../components/layout'
 import { siteMetadata } from '../../gatsby-config'
 import steel from '../steel-config'
 
+const Col = styled.div`
+
+
+@media only screen and (min-width: 600px) {
+	padding-top: 40px;
+ 
+   }
+`
 const ProductGrid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -32,6 +40,9 @@ const ProductGrid = styled.div`
 		width: 100%;
 	}
 `;
+const ImgCon = styled.div`
+
+`
 const Heading = styled.h1`
 	font-weight: 900;
 	font-size: 1.5em;
@@ -41,12 +52,12 @@ const Heading = styled.h1`
 	color: var(--subheadingColor);
 `;
 const ImgStyled = styled(GatsbyImage)`
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   max-width: 80vw;
-  @media screen and (min-width: 768px){
-    width: 100%;
-  }
+  object-fit: contain;
+
+  
 `;
 const Price = styled.p`
 	margin-bottom: 10px;
@@ -138,11 +149,14 @@ const Product = ({ data: { item }}) => {
 			/>
 			<Layout>
 				<ProductGrid>
-					<div>
+					<Col>
 						<Heading>{item.title}</Heading>
-						<ImgStyled image={imageData} alt={item.title} key={item.id}/>
-					</div>
-					<div>
+						<ImgCon>
+						<ImgStyled image={imageData} alt={item.title} key={item.id}
+						/>
+						</ImgCon>
+					</Col>
+					<Col>
 						<Price>${selected.price}</Price>
 						{item.body.en.map(({children}) => <Description key={children._key}>{children[0].text}</Description>)}
 						<InputWrap>
@@ -175,7 +189,7 @@ const Product = ({ data: { item }}) => {
 								Add to cart
 							</BuyButton>
 						</InputWrap>
-					</div>
+					</Col>
 				</ProductGrid>
 			</Layout>
 		</>

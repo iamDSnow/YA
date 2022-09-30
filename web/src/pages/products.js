@@ -14,9 +14,12 @@ const ThumbnailsWrapper = styled.div`
     grid-gap: 1rem;
     grid-auto-rows: auto auto 500px;
     padding: 20px;
+    padding-top: 40px;
     margin: 1rem auto;
 `
-
+const Card = styled.div`
+padding-top:40px;
+`
 export default function Products ({ data }) {
   
     const siteTitle = steel.title
@@ -37,6 +40,8 @@ export default function Products ({ data }) {
               variants, 
             } = item
             return (
+              
+              <Card>
               <ItemThumbnail
                 node={item}
                 key={id}
@@ -46,6 +51,7 @@ export default function Products ({ data }) {
                 price={variants[0].price}
                 description={blurb.en}
               />
+              </Card>
             )
           })}
         </ThumbnailsWrapper>

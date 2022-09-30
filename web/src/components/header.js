@@ -10,7 +10,25 @@ import { useState } from 'react'
 import MobileNav from './MobileNav'
 
 
-const HeaderWrapper = styled.div``
+const HeaderWrapper = styled.div`
+position: fixed;
+    top: 0;
+    z-index: 999;
+background: #fff;
+width: 100%;
+`
+const Nav = styled.div`
+display: none;
+@media only screen and (min-width: 900px) {
+    display: flex;
+    flex-wrap: row nowrap;
+    gap: 150px;
+    margin-left: 150px;
+    font-size: 17px ;
+    padding-top: 10px;
+
+  }
+`
 
 const MobileLinkWrapper = styled.div`
   display: flex;
@@ -34,8 +52,12 @@ const MobileIcon = styled(GatsbyImage)`
   margin-right: 20px;
   height: 35px;
   width: 35px;
+  @media only screen and (min-width: 600px) {
+    margin-right: 40px;
+  }
   @media only screen and (min-width: 900px) {
     margin-right: 0px;
+
   }
 `
 const HeaderStyled = styled.header`
@@ -45,8 +67,15 @@ const HeaderStyled = styled.header`
   flex-flow: row nowrap;
   z-index: 55;
   padding-top: 10px;
-  width: auto;
+  width: 90%;
   border-bottom: 1px solid gold;
+
+  @media only screen and (min-width: 900px) {
+
+
+
+}
+  
 
 `
 
@@ -57,14 +86,34 @@ const LinkStyled = styled(Link)`
     display: flex;
     justify-content: center;
     padding-right: 20px;
-    
+    padding-bottom: 5px;
+
+    @media only screen and (min-width: 600px) {
+    padding-left: 70px;
+    padding-right: 0px;
+
+  }
+  @media only screen and (min-width: 900px) {
+
+
+padding-right: 0px;
+padding-left: 0px;
+
+  }
   
 `
 const ImgCon = styled(GatsbyImage)`
-width: 40%;
+width: 35%;
   height: auto;
 
-  
+  @media only screen and (min-width: 900px) {
+    width: 150px;
+
+    padding-right: 0px;
+    object-fit: contain;
+    
+
+  }
 
 `
 const CartSummary = styled.div`
@@ -74,6 +123,7 @@ const CartSummary = styled.div`
     align-items: center;
     padding: 10px;
     font-weight: bold;
+
     @media screen and (min-width: 600px){
       align-items: flex-end;
     }
@@ -81,6 +131,21 @@ const CartSummary = styled.div`
 const CartCon = styled.span`
 width: 40%;
   height: auto;
+
+  @media only screen and (min-width: 600px) {
+    padding-left: 150px;
+    width: 100%;
+    
+    
+
+
+  }
+  @media only screen and (min-width: 900px) {
+    padding-left: 270px;
+
+
+  }
+
   `
 
 const CartText = styled.p`
@@ -92,7 +157,24 @@ font-size: 14px;
 
 const Links = styled(Link)`
   padding-top: 20px;
+  padding-bottom: 20px;
   text-decoration: none;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 3%);
+  width: 94.5%;
+
+  @media only screen and (min-width: 600px) {
+    width: 90%;
+    
+
+
+  }
+  @media only screen and (min-width: 900px) {
+    width: 80px;
+    
+
+
+  }
+  
 `
 
 const Header = () => {
@@ -148,6 +230,15 @@ const hamburger = getGatsbyImageData(data.sanityHeader.mobileIcon.image.asset.id
             image={imageData}
             alt={data.sanityHeader.logo.altText}
             />
+
+            <Nav>{data.sanityHeader.links.map((link, i) => {
+           return (
+             <Links to={link.link} key={i}>
+               {link.linkText}
+             </Links>
+           )
+         })}</Nav>
+
           </LinkStyled>
         <CartSummary className="snipcart-summary">
           <Link to="/" className="snipcart-checkout cart"> 
