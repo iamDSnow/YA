@@ -318,7 +318,7 @@ const ProductFeature = () => {
           <ProductWrapperOne>
           <Card>
      
-  <Links to={`/product/`+ shopData.sanityProductCardArray.productFeatureOneSlug.current}>
+  <Links to={`/products/`+ shopData.sanityProductCardArray.productFeatureOneSlug.current}>
         <ProductPicOne
         image={shopData.sanityProductCardArray.productFeatureOneImage.image.asset.gatsbyImageData}
         alt={shopData.sanityProductCardArray.productFeatureOneImage.altText}
@@ -339,7 +339,7 @@ const ProductFeature = () => {
        <ProductWrapperTwo>
        <Card>
      
-        <Links to={`/product/`+ shopData.sanityProductCardArray.productFeatureTwoSlug.current}>
+        <Links to={`/products/`+ shopData.sanityProductCardArray.productFeatureTwoSlug.current}>
       <ImgCon>
         <ProductPicTwo
           image={shopData.sanityProductCardArray.productFeatureTwoImage.image.asset.gatsbyImageData}
