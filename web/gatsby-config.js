@@ -3,9 +3,9 @@ module.exports = {
   siteMetadata: {
     title: `yateractives`,
     //must be the url your frontend is deployed to!!!
-    siteUrl: `https://example.com`,
-    description: `Steel is a sudo framework for headless ecommerce utilizing Snipcart & Sanity `,
-    author: `stordahl`
+    siteUrl: `earnest-narwhal-bfc12f.netlify.app`,
+    description: `Yater site`,
+    author: `Snow`
   },
   plugins: [
     {
