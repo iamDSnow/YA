@@ -1,4 +1,4 @@
-<img src="https://i.ibb.co/WKwXSrv/steel-logo-01-01.jpg" alt="Steel Logo" width="200px"/>
+
 
 # steel-template-gatsby 🧩
 

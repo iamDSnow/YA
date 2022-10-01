@@ -1,4 +1,4 @@
 {
-  "baseUrl": "http://localhost:8000/",
+  "baseUrl": "earnest-narwhal-bfc12f.netlify.app",
   "integrationFolder": "cypress/e2e"
 }
