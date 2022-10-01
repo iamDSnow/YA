@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { getGatsbyImageData } from 'gatsby-source-sanity'
 import { useState } from 'react'
-import MobileNav from './MobileNav'
+import MobileNav from './mobileNav'
 
 
 const HeaderWrapper = styled.div`
