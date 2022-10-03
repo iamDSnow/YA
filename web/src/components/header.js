@@ -197,15 +197,11 @@ width: 40%;
     padding-left: 270px;
     
   }
-  @media only screen and (min-width: 1024px) {
-padding-left: 300px;  
-}
+
   @media only screen and (min-width: 1200px) {
 padding-left: 340px;  
 }
-@media only screen and (min-width: 1270px) {
-padding-left: 390px;  
-}
+
 @media only screen and (min-width: 1440px) {
 padding-left: 400px;  
 }
