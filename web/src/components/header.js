@@ -48,6 +48,9 @@ padding-right: 100px;
 padding-left: 150px;  
 }
 
+@media only screen and (min-width: 2000px) {
+padding-left: 400px;  
+}
 
 @media only screen and (min-width: 2560px) {
     padding-left: 550px;
@@ -113,7 +116,22 @@ align-items: center;
 
 }
   
+@media only screen and (min-width: 2000px) {
+   
+    width: 78%;
 
+
+ 
+   
+   }
+   @media only screen and (min-width: 2000px) {
+   
+   width: 90%;
+
+
+
+  
+  }
 `
 
 const LinkStyled = styled(Link)`

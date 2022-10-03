@@ -70,10 +70,29 @@ width: 60%;
     margin-left: 220px;
  
    }
-   @media only screen and (min-width: 600px) {
+   @media only screen and (min-width: 900px) {
     width: 40%;
 
     margin-left: 220px;
+ 
+   }
+   @media only screen and (min-width: 1200px) {
+    width: 40%;
+
+    margin-left: 300px;
+ 
+   }
+   @media only screen and (min-width: 1440px) {
+    width: 40%;
+
+    margin-left: 380px;
+ 
+   }
+   @media only screen and (min-width: 2000px) {
+    width: 30%;
+
+    margin-left: 580px;
+
  
    }
    @media only screen and (min-width: 2560px) {

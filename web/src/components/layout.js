@@ -1,5 +1,6 @@
 import Footer from './footer'
 import { GlobalStyle } from '../styles/globalStyle'
+import Reset from '../styles/reset'
 import Header from './header'
 import React from 'react'
 import styled from 'styled-components'
@@ -19,6 +20,7 @@ const Layout = (props) => {
 
   return (
     <>
+      <Reset />
       <GlobalStyle />
       <PageWrapper>
         <Header/>
