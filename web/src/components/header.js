@@ -218,9 +218,14 @@ width: 100%;
 
 
   @media only screen and (min-width: 900px) {
-    padding-left: 380px;
+    padding-left: 300px;
     
   }
+  @media only screen and (min-width: 1024px) {
+    padding-left: 340px;
+    
+  }
+
 
   @media only screen and (min-width: 1300px) {
     padding-left: 420px;  
@@ -232,7 +237,7 @@ padding-left: 400px;
 
 @media only screen and (min-width: 1800px) {
    
-  padding-left: 640px;  
+  padding-left: 580px;  
 
 
 
