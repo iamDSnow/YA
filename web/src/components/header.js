@@ -116,15 +116,21 @@ align-items: center;
 
 }
   
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 1800px) {
    
-    width: 78%;
+    width: 86%;
 
 
  
    
    }
    @media only screen and (min-width: 2000px) {
+    width: 78%;
+    
+
+
+  }
+   @media only screen and (min-width: 2560px) {
    
    width: 90%;
 
@@ -195,7 +201,7 @@ const CartSummary = styled.div`
   
 `
 const CartCon = styled.span`
-width: 40%;
+width: 100%;
   height: auto;
 
   
@@ -223,6 +229,15 @@ padding-left: 340px;
 @media only screen and (min-width: 1440px) {
 padding-left: 400px;  
 }
+
+@media only screen and (min-width: 1800px) {
+   
+  padding-left: 640px;  
+
+
+
+  
+  }
 
 @media only screen and (min-width: 2560px) {
     padding-left: 0px;
@@ -267,6 +282,7 @@ const Links = styled(Link)`
 
 
   }
+
   @media only screen and (min-width: 2560px) {
     width: 160px;
     

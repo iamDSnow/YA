@@ -20,7 +20,6 @@ const Layout = (props) => {
 
   return (
     <>
-      <Reset />
       <GlobalStyle />
       <PageWrapper>
         <Header/>
