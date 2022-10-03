@@ -14,6 +14,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   border: 1px solid #000;
+  background: gold;
+
 `
 
 const Head = styled.div`
@@ -33,6 +35,10 @@ const HTitle = styled.h1`
     font-size: 40px;
 
    }
+   @media only screen and (min-width: 2560px) {
+    font-size: 60px;
+
+   }
 `
 const Title = styled.h1`
   font-size: 30px;
@@ -41,6 +47,10 @@ const Title = styled.h1`
   font-weight: bold;
   @media only screen and (min-width: 600px) {
     font-size: 40px;
+
+   }
+   @media only screen and (min-width: 2560px) {
+    font-size: 60px;
 
    }
 `
@@ -56,6 +66,10 @@ const SubText = styled.p`
     padding: 1rem;
 
    }
+   @media only screen and (min-width: 2560px) {
+    font-size: 40px;
+
+   }
 `
 const FormWrapper = styled.form`
   display: flex;
@@ -63,7 +77,7 @@ const FormWrapper = styled.form`
   padding: 3rem;
   padding-top: 0px;
   padding-bottom: 0px;
-  
+  background: gold;
 
   @media only screen and (min-width: 600px) {
     align-items: center;
@@ -90,6 +104,10 @@ const Label = styled.label`
   @media screen and (min-width: 920px) {
     font-size: 24px;
   }
+  @media only screen and (min-width: 2560px) {
+    font-size: 40px;
+
+   }
 `
 const StringInput = styled.input`
   margin-top: 8px;
@@ -111,6 +129,12 @@ const StringInput = styled.input`
     height: 32px;
     margin-top: 16px;
   }
+  @media only screen and (min-width: 2560px) {
+    font-size: 40px;
+    height: 100px;
+
+
+   }
 `
 const AreaText = styled.textarea`
   font-weight: bold;
@@ -122,9 +146,15 @@ const AreaText = styled.textarea`
   @media screen and (min-width: 600px) {
     width: 65vw;
   }
-  @media screen and (min-width: 920px) {
+  @media screen and (min-width: 900px) {
     width: 40vw;
   }
+  @media only screen and (min-width: 2560px) {
+    font-size: 40px;
+    height: 100px;
+
+
+   }
 `
 const Submit = styled.button`
   width: 40%;
@@ -139,6 +169,11 @@ const Submit = styled.button`
   @media screen and (min-width: 920px) {
     width: 15%;
   }
+  @media only screen and (min-width: 2560px) {
+    font-size: 40px;
+
+
+   }
 `
 
 const Contactya = () => {

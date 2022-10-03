@@ -12,6 +12,29 @@ padding-right: auto;
  
    
    }
+   @media only screen and (min-width: 1024px) {
+padding-left: 100px;
+padding-bottom: 20px; 
+   
+   }
+   @media only screen and (min-width: 1200px) {
+width: 100%;
+padding-left: 150px;
+
+   
+   }
+   @media only screen and (min-width: 1440px) {
+    padding-left: 275px;
+ 
+   
+   }
+   @media only screen and (min-width: 2560px) {
+    padding-left: 600px;
+    padding-right: auto;
+
+ 
+   
+   }
 `
 
 const Wrapper = styled.div`
@@ -29,6 +52,13 @@ grid-template-columns: 350px  350px  350px;
   @media only screen and (min-width: 900px) {
    
    grid-template-columns: 755px;
+  
+ 
+   
+   }
+   @media only screen and (min-width: 2560px) {
+   
+   grid-template-columns: 1100px;
   
  
    
@@ -53,7 +83,13 @@ const TitleLineTwo = styled.div`
 padding-bottom: 25px;
 font-size: 60px;
 
-
+@media only screen and (min-width: 2560px) {
+   
+  font-size: 80px;
+  
+ 
+   
+   }
 `
 const TitleLineOne = styled.div`
 color: #000;
@@ -63,6 +99,13 @@ font-size: 60px;
    padding-bottom: 25px;
  
    }
+   @media only screen and (min-width: 2560px) {
+   
+   font-size: 80px;
+   
+  
+    
+    }
 
 `
 
@@ -133,6 +176,7 @@ const ProductWrapperTwo = styled.div`
 
   
   }
+  
 `;
 const ProductWrapperFour = styled.div`
   grid-area: main;
@@ -149,7 +193,11 @@ const ProductWrapperFour = styled.div`
  @media only screen and (min-width: 900px) {
 
 }
- 
+@media only screen and (min-width: 2560px) {
+   
+   
+   }
+
 `;
 
 const ImgCon = styled.div`
@@ -164,6 +212,10 @@ padding-left: 60px;
    padding-left: 28px;   
       }
 
+      @media only screen and (min-width: 2650px) {
+   
+   padding-left: 0px;   }
+      
 `
 const ProductPicOne = styled(GatsbyImage)`
 /* height: auto; */
@@ -177,9 +229,22 @@ object-fit: fill;
   width: 64%;
   
   }
+  @media only screen and (min-width: 768px) {
+   
+   width: 54.5%;
+   
+   }
   @media only screen and (min-width: 900px) {
    
    width: 83.5%;
+
+
+   
+   }
+   @media only screen and (min-width: 2560px) {
+   
+   width: 48%;
+
 
 
    
@@ -189,6 +254,10 @@ object-fit: fill;
 const ProductPicFour = styled(GatsbyImage)`
 height: auto;
 object-fit: fill;
+@media only screen and (min-width: 2560px) {
+   
+width: 100%;      
+      }
 `
 const Content = styled.div`
 position: relative;
@@ -202,6 +271,8 @@ text-align: center;
      }
      @media only screen and (min-width: 900px) {
 }
+
+
 `
 
 
@@ -210,12 +281,24 @@ const ProductName = styled.h4`
 @media only screen and (min-width: 900px) {
   font-size: 24px;
 }
+@media only screen and (min-width: 2560px) {
+  font-size: 34px;
+
+
+  
+  }
 `;
 const ProductPrice = styled.p`
 
 @media only screen and (min-width: 900px) {
 
 }
+@media only screen and (min-width: 2560px) {
+  font-size: 24px;
+
+
+  
+  }
 `;
 
 

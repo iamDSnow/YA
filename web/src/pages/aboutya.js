@@ -31,10 +31,18 @@ justify-content: center;
 padding-top: 30px;
 padding-bottom:30px;
 
+
 `
 const AboutIngaBtn = styled.button`
 :hover{
   background: gold;
+}
+@media only screen and (min-width: 2560px) {
+
+    
+font-size: 40px;
+
+
 }`
 const AboutTitle = styled.h1`
 font-size: 30px;
@@ -49,6 +57,13 @@ font-size: 40px;
 
     
   font-size: 35px;
+
+
+}
+@media only screen and (min-width: 2560px) {
+
+    
+font-size: 60px;
 
 
 }
@@ -71,11 +86,20 @@ padding: 1rem;
 
 
 }
+@media only screen and (min-width: 2560px) {
+
+    
+font-size: 30px;
+
+
+}
 `
 
 const AboutHead = styled.div`
 padding: 1rem;
-padding-bottom: 40px;`
+padding-bottom: 40px;
+`
+
 
 const Card = styled.div`
 padding-bottom: 20px;
@@ -92,7 +116,17 @@ padding-bottom: 30px;
 
 
   }
+  @media only screen and (min-width: 2560px) {
+
+    
+font-size: 60px;
+
+
+}
 `
+
+const ImgCon = styled.div`
+padding-left: 850px;`
 
 const IngredientPic = styled(GatsbyImage)`
 @media only screen and (min-width: 900px) {
@@ -101,6 +135,15 @@ const IngredientPic = styled(GatsbyImage)`
 width: 50%;
 
 }
+@media only screen and (min-width: 2560px) {
+
+    
+width: 40%;
+
+
+
+}
+
 `
 
 const IngredientInfo = styled.p`
@@ -120,7 +163,13 @@ padding: 1rem;
 
 
 }
+@media only screen and (min-width: 2560px) {
 
+    
+font-size: 34px;
+
+
+}
 `
 const Aboutya = () => {
 
@@ -179,12 +228,12 @@ const Aboutya = () => {
   return(
     <Card key={i}>
     <IngredientTitle> {cards.ingredientTitle}</IngredientTitle> 
-    
+    <ImgCon>
     <IngredientPic
     image={cards.ingredientPic.image.asset.gatsbyImageData}
     alt={cards.ingredientPic.altText}
     />
-    
+    </ImgCon>
     {cards.ingredientText.map(payload =>{
       return(
         <IngredientInfo>{payload.children.map(info =>{

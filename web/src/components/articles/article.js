@@ -8,6 +8,12 @@ padding: 1rem;
 padding-top: 40px;
 @media only screen and (min-width: 900px) {
   padding: 2rem;
+  
+
+  }
+  @media only screen and (min-width: 1200px) {
+
+  padding: 3rem;
 
 
   }
@@ -17,6 +23,14 @@ font-size: 48px;
 font-weight: 700;
 line-height: 1.2;
 padding-bottom: 20px;
+
+@media only screen and (min-width: 2560px) {
+
+  font-size: 78px;
+
+
+}
+
 `
 const ArticleP = styled.p`
 font-size: 22px;
@@ -26,13 +40,41 @@ width: 60% ;
 
 
   }
+  @media only screen and (min-width: 1200px) {
+width: 50%;
+
+  }
+  @media only screen and (min-width: 2560px) {
+
+font-size: 50px;
+
+
+}
 
 `
 const BtnCon = styled.div`
-padding-bottom: 20px;`
+padding-bottom: 20px;
+
+@media only screen and (min-width: 2560px) {
+
+  padding-bottom: 40px;
+
+
+
+}
+`
 const Button = styled.button`
 width: 200px;
-height: auto;`
+height: auto;
+@media only screen and (min-width: 2560px) {
+
+  width: 400px;
+  height: 150px;
+  font-size: 50px;
+
+
+
+}`
 
 const Article = () => {
 

@@ -22,6 +22,11 @@ const FooterStyled = styled.footer`
 `
 const LinkTitle = styled.h3` 
 color: #fff;
+@media only screen and (min-width: 2560px) {
+  font-size: 42px;
+
+ 
+   }
 `
 
 const Content = styled.div`
@@ -48,6 +53,7 @@ padding-bottom: 10px;
 const SocialCon = styled.div`
 border-bottom: 1px solid gold;
 
+
 `
 const ImgCon = styled.div`
 width: 90%;
@@ -70,6 +76,12 @@ width: 60%;
     margin-left: 220px;
  
    }
+   @media only screen and (min-width: 2560px) {
+    width: 25%;
+
+    margin-left: 820px;
+ 
+   }
 
 `
 const PageLink = styled(Link)`
@@ -84,6 +96,11 @@ padding-bottom: 10px;
 
  
    }
+   @media only screen and (min-width: 2560px) {
+  font-size: 42px;
+
+ 
+   }
 `
 
 const End = styled.div`
@@ -91,6 +108,11 @@ text-align: center;
 padding-bottom: 10px;
 font-size: 16px;
 
+@media only screen and (min-width: 2560px) {
+  font-size: 26px;
+
+ 
+   }
 `
 
 const Footer = () => {

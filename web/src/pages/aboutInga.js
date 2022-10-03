@@ -3,12 +3,20 @@ import Layout from '../components/layout'
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
-const Container = styled.div``
+const Container = styled.div`
+  @media only screen and (min-width: 2560px) {
+
+   
+}`
 
 const ImgCon = styled.div`
 padding-top: 60px;
 @media only screen and (min-width: 900px) {
   padding-top: 80px;
+   }
+   @media only screen and (min-width: 2560px) {
+  padding-top: 120px;
+  padding-left: 400px;
    }
    `
 
@@ -23,6 +31,9 @@ font-size: 20px;
    @media only screen and (min-width: 900px) {
   padding-top: 20px;
    }
+   @media only screen and (min-width: 2560px) {
+    font-size: 62px;
+   }
    `
 const Content = styled.p`
 font-size: 16px;
@@ -31,6 +42,9 @@ font-size: 16px;
    }
    @media only screen and (min-width: 900px) {
     font-size: 22px;
+   }
+   @media only screen and (min-width: 2560px) {
+    font-size: 42px;
    }
 `
 const Paragraph = styled.div`

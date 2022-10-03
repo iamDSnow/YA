@@ -18,10 +18,16 @@ padding-top: 35px;
     
 
 
-  }`
+  }
+`
 
 const ImgCon = styled(GatsbyImage)`
+  @media only screen and (min-width: 2560px) {
+    width: 100%;
 
+ 
+   
+   }
 `
 
 const Hero = () => {

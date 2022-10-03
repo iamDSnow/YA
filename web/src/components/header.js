@@ -22,12 +22,31 @@ display: none;
 @media only screen and (min-width: 900px) {
     display: flex;
     flex-wrap: row nowrap;
-    gap: 150px;
-    margin-left: 150px;
+    gap: 100px;
+    margin-left: 90px;
     font-size: 17px ;
     padding-top: 10px;
 
   }
+
+
+  @media only screen and (min-width: 1200px) {
+padding-right: 350px; 
+font-size: 20px ;
+ }
+
+@media only screen and (min-width: 2560px) {
+    padding-left: 550px;
+    padding-right: 550px;
+    gap: 150px;
+    margin-left: 170px;
+    width: 100%;
+    font-size: 28px ;
+
+
+ 
+   
+   }
 `
 
 const MobileLinkWrapper = styled.div`
@@ -56,6 +75,10 @@ const MobileIcon = styled(GatsbyImage)`
     margin-right: 40px;
   }
   @media only screen and (min-width: 900px) {
+    margin-right: 0px;
+
+  }
+  @media only screen and (min-width: 1200px) {
     margin-right: 0px;
 
   }
@@ -98,7 +121,6 @@ const LinkStyled = styled(Link)`
 
 padding-right: 0px;
 padding-left: 0px;
-
   }
   
 `
@@ -114,6 +136,20 @@ width: 35%;
     
 
   }
+  @media only screen and (min-width: 1200px) {
+    width: 190px;
+
+
+   
+   }
+  @media only screen and (min-width: 2560px) {
+    width: 200px;
+
+    padding-right: 0px;
+    object-fit: contain;
+    
+
+  }
 
 `
 const CartSummary = styled.div`
@@ -123,6 +159,8 @@ const CartSummary = styled.div`
     align-items: center;
     padding: 10px;
     font-weight: bold;
+    padding-top: 30px;
+
 
     @media screen and (min-width: 600px){
       align-items: flex-end;
@@ -136,15 +174,27 @@ width: 40%;
     padding-left: 150px;
     width: 100%;
     
-    
 
 
   }
   @media only screen and (min-width: 900px) {
-    padding-left: 270px;
+    padding-left: 200px;
 
 
   }
+  
+  @media only screen and (min-width: 1200px) {
+padding-left: 0px;  
+}
+
+@media only screen and (min-width: 2560px) {
+    padding-left: 0px;
+    padding-right: auto;
+
+ 
+   
+   }
+
 
   `
 
@@ -170,6 +220,18 @@ const Links = styled(Link)`
   }
   @media only screen and (min-width: 900px) {
     width: 80px;
+    
+
+
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 100px;
+    
+
+
+  }
+  @media only screen and (min-width: 2560px) {
+    width: 160px;
     
 
 

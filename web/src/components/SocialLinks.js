@@ -19,6 +19,8 @@ const IconsWrap = styled.div`
 	& > *:hover {
 		opacity: 80%;
 	}
+
+	
 `;
 
 const Icons = styled(FontAwesomeIcon)`
@@ -30,7 +32,11 @@ color: #fff;
 height: 50px;
 
 }
+
 `
+const Icn = styled.a`
+@media only screen and (min-width: 2560px) {
+   }`
 library.add(fab);
 
 const SocialLinks = () => {
@@ -54,9 +60,9 @@ const SocialLinks = () => {
 		<IconsWrap>
 			{linksArr.map((elem) => {
 				return (
-					<a href={elem.link} key={elem._key} aria-label={elem.name}>
-						<Icons icon={[ 'fab', elem.icon ]} size="lg" alt={elem.name} />
-					</a>
+					<Icn href={elem.link} key={elem._key} aria-label={elem.name}>
+						<Icons icon={[ 'fab', elem.icon ]}  alt={elem.name} />
+					</Icn>
 				);
 			})}
 		</IconsWrap>

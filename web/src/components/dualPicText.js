@@ -8,6 +8,8 @@ const Con = styled.div`
 
 padding-top: 20px;
 
+
+
 `
 const Box = styled.div`
 display: grid;
@@ -25,9 +27,15 @@ display: grid;
 
   
   }
+
 `
 const Img = styled(GatsbyImage)`
 
+@media only screen and (min-width: 2560px) {
+   
+width: 100%;
+height: 1200px;       
+       }
 `
 const Content = styled.div`
 display: flex;
@@ -55,6 +63,12 @@ text-align: center;
 
   
   }
+  @media only screen and (min-width: 2650px) {
+   
+   font-size: 60px;
+ 
+   
+   }
 
 `
 const BtnCon = styled.div`
