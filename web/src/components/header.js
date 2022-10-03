@@ -16,6 +16,8 @@ position: fixed;
     z-index: 999;
 background: #fff;
 width: 100%;
+display: flex;
+
 `
 const Nav = styled.div`
 display: none;
@@ -49,9 +51,12 @@ padding-right: 100px;
 
   @media only screen and (min-width: 1200px) {
 
-     font-size: 20px ;
+    margin-left: 120px;
  }
 
+ @media only screen and (min-width: 1440px) {
+padding-left: 150px;  
+}
 
 
 @media only screen and (min-width: 2560px) {
@@ -188,6 +193,8 @@ const CartSummary = styled.div`
 const CartCon = styled.span`
 width: 40%;
   height: auto;
+  /* display: flex;
+  align-self: flex-end; */
 
   @media only screen and (min-width: 600px) {
     padding-left: 150px;
@@ -213,6 +220,9 @@ width: 40%;
 padding-left: 150px;  
 }
 
+@media only screen and (min-width: 1440px) {
+padding-left: 200px;  
+}
 
 @media only screen and (min-width: 2560px) {
     padding-left: 0px;
