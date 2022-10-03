@@ -31,7 +31,7 @@ display: none;
 
 
   @media only screen and (min-width: 1200px) {
-padding-right: 350px; 
+padding-right: 320px; 
 font-size: 20px ;
  }
 
