@@ -16,8 +16,7 @@ position: fixed;
     z-index: 999;
 background: #fff;
 width: 100%;
-display: flex;
-
+display: block;
 `
 const Nav = styled.div`
 display: none;
@@ -25,7 +24,8 @@ display: none;
 @media only screen and (min-width: 900px) {
     display: flex;
     flex-wrap: row nowrap;
-    gap: 90px;
+    justify-content: space-between;
+    align-items: center;
     margin-left: 100px;
     font-size: 17px ;
     padding-top: 10px;
@@ -34,17 +34,7 @@ display: none;
 
   }
 
-@media only screen and (min-width: 900px) {
-    display: flex;
-    flex-wrap: row nowrap;
-    gap: 90px;
-    margin-left: 100px;
-    font-size: 17px ;
-    padding-top: 10px;
-    padding-right: 20px; 
 
-
-  }
   @media only screen and (min-width: 1024px) {
 padding-right: 100px;  
 }
@@ -119,7 +109,7 @@ const HeaderStyled = styled.header`
 
   @media only screen and (min-width: 900px) {
 
-
+align-items: center;
 
 }
   
@@ -179,22 +169,19 @@ width: 35%;
 const CartSummary = styled.div`
     height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 10px;
     font-weight: bold;
-    padding-top: 30px;
-
-
-    @media screen and (min-width: 600px){
-      align-items: flex-end;
-    }
+    justify-items: center;
+    align-items: center;
+    padding-right: auto;
+  
 `
 const CartCon = styled.span`
 width: 40%;
   height: auto;
-  /* display: flex;
-  align-self: flex-end; */
+
+  
+ 
 
   @media only screen and (min-width: 600px) {
     padding-left: 150px;
@@ -204,24 +191,23 @@ width: 40%;
 
   }
 
-  @media only screen and (min-width: 800px) {
-    padding-left: 200px;
 
-
-  }
 
   @media only screen and (min-width: 900px) {
-    padding-left: 80px;
-
-
+    padding-left: 270px;
+    
   }
-  
-  @media only screen and (min-width: 1200px) {
-padding-left: 150px;  
+  @media only screen and (min-width: 1024px) {
+padding-left: 300px;  
 }
-
+  @media only screen and (min-width: 1200px) {
+padding-left: 340px;  
+}
+@media only screen and (min-width: 1270px) {
+padding-left: 390px;  
+}
 @media only screen and (min-width: 1440px) {
-padding-left: 200px;  
+padding-left: 400px;  
 }
 
 @media only screen and (min-width: 2560px) {
