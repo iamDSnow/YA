@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 
 const Container = styled.div`
   @media only screen and (min-width: 900px) {
-padding-left: 200px;
+padding-left: 20px;
 padding-right: auto;
  
    
@@ -53,7 +53,7 @@ grid-template-columns: 350px  350px  350px;
    
    grid-template-columns: 755px;
   
- 
+
    
    }
    @media only screen and (min-width: 2560px) {
@@ -203,13 +203,13 @@ const ProductWrapperFour = styled.div`
 const ImgCon = styled.div`
 
 @media only screen and (min-width: 600px) {
-   
-padding-left: 60px;   
+  padding-left: 75px;
+
    }
 
-   @media only screen and (min-width: 600px) {
-   
-   padding-left: 28px;   
+   @media only screen and (min-width: 900px) {
+    padding-left: 35px;
+
       }
 
       @media only screen and (min-width: 2650px) {
@@ -267,9 +267,12 @@ flex-flow: column nowrap;
 text-align: center;
 @media only screen and (min-width: 600px) {
  
+  padding-bottom: 8.5px;
  
      }
      @media only screen and (min-width: 900px) {
+      padding-bottom: 0px;
+
 }
 
 
@@ -277,9 +280,12 @@ text-align: center;
 
 
 const ProductName = styled.h4`
+@media only screen and (min-width: 600px) {
+  font-size: 26px;
+}
 
 @media only screen and (min-width: 900px) {
-  font-size: 24px;
+  font-size: 21.3px;
 }
 @media only screen and (min-width: 2560px) {
   font-size: 34px;
@@ -289,6 +295,11 @@ const ProductName = styled.h4`
   }
 `;
 const ProductPrice = styled.p`
+@media only screen and (min-width: 600px) {
+  font-size: 24px;
+
+}
+
 
 @media only screen and (min-width: 900px) {
 

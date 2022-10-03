@@ -19,20 +19,40 @@ width: 100%;
 `
 const Nav = styled.div`
 display: none;
+
 @media only screen and (min-width: 900px) {
     display: flex;
     flex-wrap: row nowrap;
-    gap: 100px;
-    margin-left: 90px;
+    gap: 90px;
+    margin-left: 100px;
     font-size: 17px ;
     padding-top: 10px;
+    padding-right: 20px; 
+
 
   }
 
+@media only screen and (min-width: 900px) {
+    display: flex;
+    flex-wrap: row nowrap;
+    gap: 90px;
+    margin-left: 100px;
+    font-size: 17px ;
+    padding-top: 10px;
+    padding-right: 20px; 
+
+
+  }
+  @media only screen and (min-width: 1024px) {
+padding-right: 100px;  
+}
+
   @media only screen and (min-width: 1200px) {
-padding-right: 320px; 
-font-size: 20px ;
+
+     font-size: 20px ;
  }
+
+
 
 @media only screen and (min-width: 2560px) {
     padding-left: 550px;
@@ -73,7 +93,7 @@ const MobileIcon = styled(GatsbyImage)`
   @media only screen and (min-width: 600px) {
     margin-right: 40px;
   }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 900px ) {
     margin-right: 0px;
 
   }
@@ -176,15 +196,23 @@ width: 40%;
 
 
   }
-  @media only screen and (min-width: 900px) {
+
+  @media only screen and (min-width: 800px) {
     padding-left: 200px;
+
+
+  }
+
+  @media only screen and (min-width: 900px) {
+    padding-left: 80px;
 
 
   }
   
   @media only screen and (min-width: 1200px) {
-padding-left: 0px;  
+padding-left: 150px;  
 }
+
 
 @media only screen and (min-width: 2560px) {
     padding-left: 0px;
