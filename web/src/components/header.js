@@ -18,6 +18,7 @@ background: #fff;
 width: 100%;
 display: block;
 `
+
 const Nav = styled.div`
 display: none;
 
@@ -26,10 +27,10 @@ display: none;
     flex-wrap: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-left: 100px;
+    padding-left: 150px;
     font-size: 17px ;
     padding-top: 10px;
-    padding-right: 20px; 
+
 
 
   }
@@ -72,6 +73,7 @@ const MobileLinkWrapper = styled.div`
   justify-items: center;
   text-align: center;
 `
+
 const MobileIconWrapper = styled.div`
 height: 35px;
 
@@ -222,7 +224,7 @@ width: 100%;
     
   }
   @media only screen and (min-width: 1024px) {
-    padding-left: 340px;
+    padding-left: 260px;
     
   }
 
