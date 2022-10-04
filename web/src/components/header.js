@@ -220,26 +220,26 @@ width: 100%;
 
 
   @media only screen and (min-width: 900px) {
-    padding-left: 300px;
+    /* padding-left: 300px; */
     
   }
   @media only screen and (min-width: 1024px) {
-    padding-left: 260px;
+    /* padding-left: 260px; */
     
   }
 
 
   @media only screen and (min-width: 1300px) {
-    padding-left: 420px;  
+    /* padding-left: 420px;   */
 }
 
 @media only screen and (min-width: 1440px) {
-padding-left: 400px;  
+/* padding-left: 400px;   */
 }
 
 @media only screen and (min-width: 1800px) {
    
-  padding-left: 580px;  
+  /* padding-left: 580px;   */
 
 
 
