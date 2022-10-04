@@ -37,6 +37,9 @@ display: none;
 
 
   @media only screen and (min-width: 1024px) {
+
+    padding-left: 280px;
+
 }
 
   @media only screen and (min-width: 1200px) {
@@ -51,6 +54,7 @@ display: none;
 
 @media only screen and (min-width: 2560px) {
     padding-left: 550px;
+    margin-left: 170px;
     width: 100%;
     font-size: 28px ;
 
@@ -170,7 +174,7 @@ width: 35%;
 
   }
   @media only screen and (min-width: 1200px) {
-    width: 190px;
+    width: 150px;
 
 
    
@@ -217,13 +221,13 @@ width: 100%;
     
   }
   @media only screen and (min-width: 1024px) {
-    /* padding-left: 260px; */
+    padding-left: 370px;
     
   }
 
 
   @media only screen and (min-width: 1300px) {
-    /* padding-left: 420px;   */
+    /* padding-left: 650px;   */
 }
 
 @media only screen and (min-width: 1440px) {
