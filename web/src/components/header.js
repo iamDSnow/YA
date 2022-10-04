@@ -221,7 +221,7 @@ width: 100%;
     
   }
   @media only screen and (min-width: 1024px) {
-    padding-left: 370px;
+    /* padding-left: 370px; */
     
   }
 
