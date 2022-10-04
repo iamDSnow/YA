@@ -37,27 +37,20 @@ display: none;
 
 
   @media only screen and (min-width: 1024px) {
-padding-right: 100px;  
 }
 
   @media only screen and (min-width: 1200px) {
 
-    margin-left: 120px;
  }
 
  @media only screen and (min-width: 1440px) {
-padding-left: 150px;  
 }
 
 @media only screen and (min-width: 2000px) {
-padding-left: 400px;  
 }
 
 @media only screen and (min-width: 2560px) {
     padding-left: 550px;
-    padding-right: 550px;
-    gap: 150px;
-    margin-left: 170px;
     width: 100%;
     font-size: 28px ;
 
