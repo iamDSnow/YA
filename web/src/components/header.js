@@ -22,6 +22,7 @@ display: block;
 const Nav = styled.div`
 display: none;
 
+
 @media only screen and (min-width: 900px) {
     display: flex;
     flex-wrap: row nowrap;
@@ -38,7 +39,9 @@ display: none;
 
   @media only screen and (min-width: 1024px) {
 
-    padding-left: 280px;
+    padding-left: 250px;
+    padding-right: 250px;
+
 
 }
 
@@ -207,7 +210,7 @@ width: 100%;
  
 
   @media only screen and (min-width: 600px) {
-    padding-left: 150px;
+    /* padding-left: 150px; */
     width: 100%;
     
 
