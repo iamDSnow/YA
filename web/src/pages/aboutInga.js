@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { Box } from '@mui/system'
 const Container = styled.div`
   @media only screen and (min-width: 2560px) {
 
@@ -10,14 +11,8 @@ const Container = styled.div`
 }`
 
 const ImgCon = styled.div`
-padding-top: 60px;
-@media only screen and (min-width: 900px) {
-  padding-top: 80px;
-   }
-   @media only screen and (min-width: 2560px) {
-  padding-top: 120px;
-  padding-left: 400px;
-   }
+
+ top: 0;
    `
 
 const IngaImg = styled(GatsbyImage)`
@@ -92,6 +87,7 @@ const AboutInga = () => {
   return (
     <Layout>
     <Container>
+      <Box sx={{padding: '2rem'}}>
       <ImgCon>
       <IngaImg
       image={data.sanityAboutInga.pic.image.asset.gatsbyImageData}
@@ -146,6 +142,7 @@ const AboutInga = () => {
       )
     })}</Paragraph>
     </Content>
+    </Box>
     </Container>
     </Layout>
   )

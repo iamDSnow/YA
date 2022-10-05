@@ -3,67 +3,13 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import { Container, Box } from "@mui/system";
+import { Grid, Paper } from "@mui/material";
 
+const Con = styled.div`
 
-const Container = styled.div`
-  @media only screen and (min-width: 900px) {
-padding-left: 20px;
-padding-right: auto;
- 
-   
-   }
-   @media only screen and (min-width: 1024px) {
-padding-left: 100px;
-padding-bottom: 20px; 
-   
-   }
-   @media only screen and (min-width: 1200px) {
-width: 100%;
-padding-left: 150px;
-
-   
-   }
-   @media only screen and (min-width: 1440px) {
-    padding-left: 275px;
- 
-   
-   }
-   @media only screen and (min-width: 2560px) {
-    padding-left: 600px;
-    padding-right: auto;
-
- 
-   
-   }
+padding: 2rem;
 `
-
-const Wrapper = styled.div`
-padding: 0rem calc((10vw - 900px) / 2);
-padding-right: 120px;
-display: grid;
-grid-template-columns: 350px  350px  350px;
-
-@media only screen and (min-width: 600px) {
-   
-  grid-template-columns: 690px;
-
-  
-  }
-  @media only screen and (min-width: 900px) {
-   
-   grid-template-columns: 755px;
-  
-
-   
-   }
-   @media only screen and (min-width: 2560px) {
-   
-   grid-template-columns: 1100px;
-  
- 
-   
-   }
-`;
 
 
 const Info = styled.div`
@@ -94,9 +40,10 @@ font-size: 60px;
 const TitleLineOne = styled.div`
 color: #000;
 font-size: 60px;
+padding-bottom: 20px;
+
 @media only screen and (min-width: 600px) {
    
-   padding-bottom: 25px;
  
    }
    @media only screen and (min-width: 2560px) {
@@ -109,155 +56,62 @@ font-size: 60px;
 
 `
 
-const HighlightCon = styled.div`
-
-
-@media only screen and (min-width: 600px) {
-   
-  display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-areas:
-     "main main side side"
-     "main main side side"
-     "main main sube sube"
-     "main main sube sube";
- 
- }
- @media only screen and (min-width: 900px) {
-  display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-areas:
-     "main main side side"
-     "main main side side"
-     "main main sube sube"
-     "main main sube sube";
- }
-
-
-`
 
 const Links = styled(Link)`
 text-decoration: none;
 `
 
-const Card = styled.div`
-border: 1px solid #A9A9A9;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-
-transition: 0.4s cubic-bezier(0.85, 0.82, 0.165, 1);
-&:hover{
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-`
-// Wrapper for the image
-const ProductWrapperOne = styled.div`
-  grid-area: side;
-  padding-bottom: 15px;
-
-  @media only screen and (min-width: 600px) {
-   
-    padding-bottom: 0px;
- 
-   
-   }
-
-`;
-const ProductWrapperTwo = styled.div`
-  grid-area: sube;
-
-  @media only screen and (min-width: 600px) {
-   
-   padding-bottom: 0px;
-
-
-  
-  }
-  
-`;
-const ProductWrapperFour = styled.div`
-  grid-area: main;
-  padding-bottom: 15px;
-
-  @media only screen and (min-width: 600px) {
-   
-   padding-bottom: 0px;
-
-  
-  }
-
- 
- @media only screen and (min-width: 900px) {
-
-}
-@media only screen and (min-width: 2560px) {
-   
-   
-   }
-
-`;
-
 const ImgCon = styled.div`
+justify-items: center;
+justify-content: center;
+align-items: center;
+align-content: center;
+justify-self: center;
+padding-top: 25px;
+
+@media only screen and (min-width: 900px) {
+ 
+  padding-top: 50px;
+
+}
+      
+`
+const ImgCon2 = styled.div`
+padding-left: 140px;
+padding-top: 56px;
 
 @media only screen and (min-width: 600px) {
-  padding-left: 75px;
+ 
+  padding-left: 65px;
+
+    }
+    @media only screen and (min-width: 900px) {
+ 
+      padding-left: 120px;
 
    }
-
-   @media only screen and (min-width: 900px) {
-    padding-left: 35px;
-
-      }
-
-      @media only screen and (min-width: 2650px) {
-   
-   padding-left: 0px;   }
       
 `
 const ProductPicOne = styled(GatsbyImage)`
 /* height: auto; */
 object-fit: fill;
+width: 74%;
+
 `
 const ProductPicTwo = styled(GatsbyImage)`
 object-fit: fill;
-
-@media only screen and (min-width: 600px) {
-   
-  width: 64%;
-  
-  }
-  @media only screen and (min-width: 768px) {
-   
-   width: 54.5%;
-   
-   }
-  @media only screen and (min-width: 900px) {
-   
-   width: 83.5%;
-
-
-   
-   }
-   @media only screen and (min-width: 2560px) {
-   
-   width: 48%;
+width: 58%;
 
 
 
-   
-   }
 
 `
 const ProductPicFour = styled(GatsbyImage)`
 height: auto;
-object-fit: fill;
-@media only screen and (min-width: 2560px) {
+object-fit: cover;
+
+width: 100%;
    
-width: 100%;      
-      }
 `
 const Content = styled.div`
 position: relative;
@@ -281,11 +135,11 @@ text-align: center;
 
 const ProductName = styled.h4`
 @media only screen and (min-width: 600px) {
-  font-size: 26px;
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 900px) {
-  font-size: 21.3px;
+  font-size: 18px;
 }
 @media only screen and (min-width: 2560px) {
   font-size: 34px;
@@ -358,38 +212,10 @@ const ProductFeature = () => {
   `)
  
 
-// const imageData = getGatsbyImageData(shopData.sanityProductCardArray.staticPic.image.asset.id, {maxWidth: 25}, steel.sanity)
-// const productOne = getGatsbyImageData( shopData.sanityProductCardArray.productFeatureCard.map(card=>{
-//     return(
-// card.product.variants.map((payload) =>{
-//     return(
-    
-//         payload.images.map(pic=>{
-//             return(
-//                 pic.asset.id
-
-//             )
-//         })
-   
-// )}))}), {maxWidth: 400}, steel.sanity)
-
-// const productTwo = getGatsbyImageData( shopData.sanityProductCardArray.productFeatureCard.map(card=>{
-//     return(
-// card.product.variants.map((payload) =>{
-//     return(
-    
-//         payload.images.map(pic=>{
-//             return(
-//                 pic.asset.id
-
-//             )
-//         })
-   
-// )}))}), {maxWidth: 400}, steel.sanity)
-
   return (
-    <Container>
-       <Info>
+    // <Container container >
+      <Con>
+        <Info>
         <TitleLineOne>
                 Yater
         </TitleLineOne>
@@ -397,64 +223,71 @@ const ProductFeature = () => {
         &nbsp; &nbsp;Essentials
         </TitleLineTwo>
         </Info>
-    <Wrapper>
-      <HighlightCon>
-      <ProductWrapperFour>
-          <Card>
+        <Box
+         sx={{
+      padding:' 2rem'
+        }}
+        >
+            <Grid container spacing={2} justify="center">
+      <Grid item xs={12} sm={8}>
+      <Paper >
       
-        <ProductPicFour
-        image={shopData.sanityProductCardArray.staticPic.image.asset.gatsbyImageData}
-        alt={shopData.sanityProductCardArray.staticPic.altText}
+      <ProductPicFour
+      image={shopData.sanityProductCardArray.staticPic.image.asset.gatsbyImageData}
+      alt={shopData.sanityProductCardArray.staticPic.altText}
 
-        />
-             </Card>
-       </ProductWrapperFour>
-          <ProductWrapperOne>
-          <Card>
+      />
+           </Paper>
+                 </Grid>
+      <Grid item container direction="column" xs={12} sm={4} spacing={2}>
+        <Grid item>
+        <Paper  >
      
-  <Links to={`/products/`+ shopData.sanityProductCardArray.productFeatureOneSlug.current}>
-        <ProductPicOne
-        image={shopData.sanityProductCardArray.productFeatureOneImage.image.asset.gatsbyImageData}
-        alt={shopData.sanityProductCardArray.productFeatureOneImage.altText}
+     <Links to={`/products/`+ shopData.sanityProductCardArray.productFeatureOneSlug.current}>
+     <Content>
+     <ImgCon>
 
-        />
-          <Content>
-<ProductName>{shopData.sanityProductCardArray.productFeatureOneTitle}</ProductName>
-<ProductPrice>{'$'+shopData.sanityProductCardArray.productFeatureOnePrice}</ProductPrice>
+           <ProductPicOne
+           image={shopData.sanityProductCardArray.productFeatureOneImage.image.asset.gatsbyImageData}
+           alt={shopData.sanityProductCardArray.productFeatureOneImage.altText}
    
-</Content>
-        </Links>
-       
-             </Card>
+           />
+                </ImgCon>
+
+   <ProductName>{shopData.sanityProductCardArray.productFeatureOneTitle}</ProductName>
+   <ProductPrice>{'$'+shopData.sanityProductCardArray.productFeatureOnePrice}</ProductPrice>
+      
+   </Content>
+           </Links>
           
-       </ProductWrapperOne>
-      
-       
-       <ProductWrapperTwo>
-       <Card>
+             
+          </Paper>
+          </Grid>
+        <Grid item>
+        <Paper  >
      
-        <Links to={`/products/`+ shopData.sanityProductCardArray.productFeatureTwoSlug.current}>
-      <ImgCon>
-        <ProductPicTwo
-          image={shopData.sanityProductCardArray.productFeatureTwoImage.image.asset.gatsbyImageData}
-          alt={shopData.sanityProductCardArray.productFeatureTwoImage.altText}
-        />
-        </ImgCon>
-             <Content>
-            <ProductName>{shopData.sanityProductCardArray.productFeatureTwoTitle}</ProductName>
+     <Links to={`/products/`+ shopData.sanityProductCardArray.productFeatureTwoSlug.current}>
+   <ImgCon2>
+     <ProductPicTwo
+       image={shopData.sanityProductCardArray.productFeatureTwoImage.image.asset.gatsbyImageData}
+       alt={shopData.sanityProductCardArray.productFeatureTwoImage.altText}
+     />
+     </ImgCon2>
+          <Content>
+         <ProductName>{shopData.sanityProductCardArray.productFeatureTwoTitle}</ProductName>
 <ProductPrice>{'$'+shopData.sanityProductCardArray.productFeatureTwoPrice}</ProductPrice>
-   
+
 </Content>
-        </Links>
-            
-             </Card>
-      
+     </Links>
+         
+          </Paper>
+                  </Grid>
+      </Grid>
+    </Grid>
+    </Box>
        
-       </ProductWrapperTwo>
-    
-   </HighlightCon>
-         </Wrapper>
-         </Container>
+         </Con>
+        //  </Container>
   )
 }
 

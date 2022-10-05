@@ -39,12 +39,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `yateractives`,
-        short_name: `stg`,
+        short_name: `ya`,
         start_url: `/`,
         background_color: `bg`,
-        theme_color: `darkBlue`,
-        display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        theme_color: `white`,
+        display: `standalone`,
+        icon: `src/media/photos/logo.webp`,
       },
     }
   ],

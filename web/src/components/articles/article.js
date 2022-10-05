@@ -2,9 +2,10 @@ import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { Container } from '@mui/system'
 
 const ArticleWrapper = styled.div`
-padding: 1rem;
+padding: 2rem;
 padding-top: 40px;
 @media only screen and (min-width: 900px) {
   padding: 2rem;
@@ -96,6 +97,7 @@ const Article = () => {
   `)
 
   return (
+    <Container>
     <ArticleWrapper>
     {data.sanityHome.textOne.map((tOne)=>{
         return(
@@ -119,6 +121,7 @@ const Article = () => {
         <Link to='/products'><Button >Products</Button></Link>
     </BtnCon>
     </ArticleWrapper>
+    </Container>
   )
 }
 

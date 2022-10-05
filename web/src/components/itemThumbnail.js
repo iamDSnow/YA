@@ -27,7 +27,9 @@ const Heading = styled.h2`
 `
 
 const LinkStyled = styled(Link)`
-    width: 100%;
+    width: 150px;
+    height: auto;
+
     box-shadow: none;
     text-decoration: none;
     color: inherit;
@@ -41,11 +43,7 @@ const DescStyled = styled.div`
 `
 
 const ImgStyled = styled(GatsbyImage)`
-    width: 250px;
-    height: 250px;
-    @media (max-width: 930px) {
-        height: 250px;
-      }
+    
 `
 
 const Price = styled.p`
@@ -55,7 +53,7 @@ const Price = styled.p`
 
 const itemThumbnail = ({link, image, heading, description, price}) => {
 
-  const imageData = getGatsbyImageData(image, {maxWidth: 600}, steel.sanity);
+  const imageData = getGatsbyImageData(image, {maxWidth: 250}, steel.sanity);
   
   return (
     <ItemThumbnailStyled>

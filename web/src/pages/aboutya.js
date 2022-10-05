@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import YaterVid from '../media/video/YaterVId.mp4';
 import { Link } from 'gatsby';
+import { ImageList,ImageListItem, ListItemText, ListSubheader,Typography, Grid } from '@mui/material';
+import { Box, Container } from '@mui/system';
 
 const AboutCon = styled.div`
 
@@ -13,15 +15,7 @@ const AboutCon = styled.div`
   const AboutVid = styled.video`
   width: 100%    !important;
   height: auto   !important;
-  padding-top: 60px;
 
-  @media only screen and (min-width: 600px) {
-
-    
-    padding-top: 80px;
-
-
-}
 
   `
 
@@ -46,6 +40,7 @@ font-size: 40px;
 }`
 const AboutTitle = styled.h1`
 font-size: 30px;
+text-align: center;
 @media only screen and (min-width: 600px) {
 
     
@@ -129,21 +124,8 @@ const ImgCon = styled.div`
 padding-left: 850px;`
 
 const IngredientPic = styled(GatsbyImage)`
-@media only screen and (min-width: 900px) {
-
-    
-width: 50%;
-
-}
-@media only screen and (min-width: 2560px) {
-
-    
-width: 40%;
-
-
-
-}
-
+height: auto;
+/* width: 600px; */
 `
 
 const IngredientInfo = styled.p`
@@ -203,7 +185,7 @@ const Aboutya = () => {
   `)
   return (
     <Layout>
- 
+      <Container>
      <AboutVid loop autoPlay={true} muted  width="560" height="349">
     <source  src={YaterVid} type="video/mp4" />
       </AboutVid>
@@ -223,38 +205,110 @@ const Aboutya = () => {
     })
   )
 })}
-</AboutHead>
+
+
+<ImageList 
+
+sx={{
+              
+  '@media only screen and (min-width: 390px)': {
+
+
+    display: 'flex',
+    flexFlow: 'column wrap',
+     justifyContent: 'center',
+      
+    
+    },     
+    
+    '@media only screen and (min-width: 600px)': {
+
+
+      display: 'grid',
+     
+        
+      
+      }  
+ 
+
+}}
+>
+ 
 {data.sanityAboutya.cardArray.map((cards, i)=>{
   return(
-    <Card key={i}>
-    <IngredientTitle> {cards.ingredientTitle}</IngredientTitle> 
-    <ImgCon>
-    <IngredientPic
+       <ImageListItem  key={i}  >
+ <IngredientPic
     image={cards.ingredientPic.image.asset.gatsbyImageData}
     alt={cards.ingredientPic.altText}
+    loading={'lazy'}
     />
-    </ImgCon>
+   
+      <Box
+       sx={{
+              
+        position: 'absolute',
+        display: 'flex',
+        flexFlow: 'column wrap',
+         justifyContent: 'center',
+
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        bgcolor: 'rgba(0, 0, 0, 0.54)',
+        color: 'white',
+        padding: '10px',
+        height:'100%',
+        textAlign: 'center',
+
+       
+      
+      }}>
+           
+      <div> 
+      
+           
+           
+            <IngredientTitle>         
+             {cards.ingredientTitle}
+          </IngredientTitle>
+             
+        </div> 
+  
     {cards.ingredientText.map(payload =>{
       return(
-        <IngredientInfo>{payload.children.map(info =>{
+      
+      <div> 
+        {payload.children.map(info =>{
           return(
-            info.text
-          )
-        })}</IngredientInfo>
-      )
-    })}
+           
+           
+            <ListItemText
+           
+          >         
+             {info.text}
+          </ListItemText>
+             
+               )
+    })}</div> 
+    )
+  })}
+  </Box>
+     
+   </ImageListItem>
+ )})}
+</ImageList>
 
-{/* {console.log(cards.ingredientText.map(payload =>{
-  return(
-    {payload.children.map()}
-  )
-}))} */}
-    </Card>
-   
 
-  )
-})}
+
+
+
+</AboutHead>
+
+  
+
+
       </AboutCon>
+      </Container>
     </Layout>
   )
 }

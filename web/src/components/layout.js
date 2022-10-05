@@ -1,17 +1,17 @@
 import Footer from './footer'
 import { GlobalStyle } from '../styles/globalStyle'
-import Reset from '../styles/reset'
 import Header from './header'
 import React from 'react'
 import styled from 'styled-components'
+import Navbar from './navbar'
 
 const PageWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 `
 
 const MainSection = styled.main`
-  margin: 30px 0;
+  /* margin: 30px 0; */
   width: 100%;
 `
 
@@ -22,7 +22,8 @@ const Layout = (props) => {
     <>
       <GlobalStyle />
       <PageWrapper>
-        <Header/>
+        {/* <Header/> */}
+        <Navbar />
         <MainSection>{children}</MainSection>
         <Footer />
       </PageWrapper>

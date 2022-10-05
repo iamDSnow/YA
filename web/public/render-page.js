@@ -3737,18 +3737,18 @@ var plugins = [{
   options: {
     "plugins": [],
     "name": "yateractives",
-    "short_name": "stg",
+    "short_name": "ya",
     "start_url": "/",
     "background_color": "bg",
-    "theme_color": "darkBlue",
-    "display": "minimal-ui",
-    "icon": "src/assets/gatsby-icon.png",
+    "theme_color": "white",
+    "display": "standalone",
+    "icon": "src/media/photos/logo.webp",
     "legacy": true,
     "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "68aa167d785ea46095075c03564f4a85"
+    "cacheDigest": "1c46991f572e0abf99e7c7ff8e43079e"
   }
 }];
 /* global plugins */

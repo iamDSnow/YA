@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import CategoriesFilter from '../components/CategoriesFilter'
 import ItemThumbnail from '../components/itemThumbnail'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import steel from "../steel-config.js"
+import { Card, Box } from "@mui/material"
+// import CategoriesFilter from '../components/CategoriesFilter'
 
 const ThumbnailsWrapper = styled.div`
     width: 100%;
@@ -14,12 +15,8 @@ const ThumbnailsWrapper = styled.div`
     grid-gap: 1rem;
     grid-auto-rows: auto auto 500px;
     padding: 20px;
-    padding-top: 40px;
-    margin: 1rem auto;
 `
-const Card = styled.div`
-padding-top:40px;
-`
+
 export default function Products ({ data }) {
   
     const siteTitle = steel.title
@@ -42,6 +39,7 @@ export default function Products ({ data }) {
             return (
               
               <Card>
+                <Box sx={{padding: '1rem'}}>
               <ItemThumbnail
                 node={item}
                 key={id}
@@ -51,6 +49,7 @@ export default function Products ({ data }) {
                 price={variants[0].price}
                 description={blurb.en}
               />
+              </Box>
               </Card>
             )
           })}

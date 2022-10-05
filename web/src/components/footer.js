@@ -8,7 +8,7 @@ import steel from "../steel-config";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const FooterStyled = styled.footer`
-  width: 100%;
+  max-width: 1500px;
   background: #181818;
 
   color: #fff;
@@ -17,8 +17,7 @@ const FooterStyled = styled.footer`
     margin-bottom: 1.2rem;
   }
 
-  @media (max-width: 600px) {
-  }
+  
 `
 const LinkTitle = styled.h3` 
 color: #fff;
@@ -41,6 +40,7 @@ display: flex;
 flex-flow: column nowrap;
 padding-left: 15px;
 padding-bottom: 10px;
+
 @media only screen and (min-width: 600px) {
    width:40%;
   padding-left: 100px;

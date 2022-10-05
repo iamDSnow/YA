@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { Container } from '@mui/system'
 
 const Con = styled.div`
 
@@ -13,6 +14,9 @@ padding-top: 20px;
 `
 const Box = styled.div`
 display: grid;
+box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+border-radius: 5px;
+overflow: hidden;
 @media only screen and (min-width: 600px) {
    
    display: grid;
@@ -108,7 +112,8 @@ const DualPicText = () => {
   `)
   return (
     <>
-    <Con>
+    <Container             sx={{ paddingBottom: '50px'}}
+>
       <Box>
       <Img
       image={data.sanityDualpicText.leftPic.image.asset.gatsbyImageData}
@@ -133,7 +138,7 @@ const DualPicText = () => {
       alt={data.sanityDualpicText.rightPic.altText}
        />
        </Box>
-    </Con>
+    </Container>
     </>
   )
 }
