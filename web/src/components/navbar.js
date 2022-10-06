@@ -21,50 +21,33 @@ const ImgCon = styled(GatsbyImage)`
   max-height: 100%;
   max-width: 100%;
 
-
   @media only screen and (min-width: 600px) {
- 
     max-width: 20%;
-
-} 
-
+  }
 `;
 
-
 const CartSummary = styled.div`
-max-width: 100%;
-margin-bottom:5px;
-margin-left: 58%;
-@media only screen and (min-width: 450px) {
-  margin-left: 0px;
-
-
-} 
-
+  max-width: 100%;
+  margin-bottom: 5px;
+  margin-left: 58%;
+  @media only screen and (min-width: 450px) {
+    margin-left: 0px;
+  }
 `;
 
 const CartText = styled.p`
-  
- 
   font-size: 14px;
-
-
-
 `;
 
 const Links = styled(Link)`
   text-decoration: none;
-
- 
- `;
+`;
 
 const HomeLink = styled(Link)`
-width: 60px;
-padding-left: 20px;
-`
+  width: 60px;
+  padding-left: 20px;
+`;
 const drawerWidth = 240;
-
-
 
 function Navbar(props) {
   const data = useStaticQuery(graphql`
@@ -94,29 +77,23 @@ function Navbar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} >
-
+    <Box onClick={handleDrawerToggle}>
       <List>
-        
-      <ImgCon
-                  image={data.sanityHeader.logo.image.asset.gatsbyImageData}
-                  alt={data.sanityHeader.logo.altText}
-                  style={{marginLeft: '100px'}}
-                />
-      <Box sx={{ my: 5 }}>
-      
-    </Box>
-      <Divider />
+        <ImgCon
+          image={data.sanityHeader.logo.image.asset.gatsbyImageData}
+          alt={data.sanityHeader.logo.altText}
+          style={{ marginLeft: "100px" }}
+        />
+        <Box sx={{ my: 5 }}></Box>
+        <Divider />
 
-      
-      
-      {data.sanityHeader.links.map((link, i) => {
-              return (
-                <Links to={link.link} key={i}>
-                  <ListItem sx={{ color: "#000" }}>{link.linkText}</ListItem>
-                </Links>
-              );
-            })}
+        {data.sanityHeader.links.map((link, i) => {
+          return (
+            <Links to={link.link} key={i}>
+              <ListItem sx={{ color: "#000" }}>{link.linkText}</ListItem>
+            </Links>
+          );
+        })}
       </List>
     </Box>
   );
@@ -126,7 +103,7 @@ function Navbar(props) {
   const { state } = useContext(SnipcartContext);
   const { cartQuantity } = state;
   return (
-    <Box sx={{ display: "flex"}}>
+    <Box sx={{ display: "flex" }}>
       <AppBar component="nav">
         <Toolbar sx={{ background: "#dcc9a4" }}>
           <IconButton
@@ -165,12 +142,21 @@ function Navbar(props) {
             </Typography>
           </div>
 
-          <Box sx={{ flexGrow: 3, display: { xs: "none", sm: "flex" },
-        paddingRight:{sm: "0px" } }}>
+          <Box
+            sx={{
+              flexGrow: 3,
+              display: { xs: "none", sm: "flex" },
+              paddingRight: { sm: "0px" },
+            }}
+          >
             {data.sanityHeader.links.map((link, i) => {
               return (
                 <Links to={link.link} key={i}>
-                  <Button sx={{ color: "#000",  display: "flex", width: "180px"}}>{link.linkText}</Button>
+                  <Button
+                    sx={{ color: "#000", display: "flex", width: "180px" }}
+                  >
+                    {link.linkText}
+                  </Button>
                 </Links>
               );
             })}
@@ -181,12 +167,12 @@ function Navbar(props) {
               <IconButton
                 color="inherit"
                 aria-label="add to shopping cart"
-                sx={{ color: "#000", display: "flex", justifyItems: "center"  }}
+                sx={{ color: "#000", display: "flex", justifyItems: "center" }}
               >
                 <AddShoppingCartIcon />
+                <CartText>{cartQuantity ? cartQuantity : ""}</CartText>
               </IconButton>{" "}
             </Link>
-            <CartText>{cartQuantity ? cartQuantity : ""}</CartText>
           </CartSummary>
         </Toolbar>
       </AppBar>

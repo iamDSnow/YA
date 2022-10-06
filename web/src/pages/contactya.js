@@ -1,10 +1,10 @@
-import React from 'react'
-import Layout from '../components/layout'
-import styled from 'styled-components'
-import { useState } from 'react'
-import { navigate } from 'gatsby'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Container, Box } from '@mui/system'
+import React from "react";
+import Layout from "../components/layout";
+import styled from "styled-components";
+import { useState } from "react";
+import { navigate } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
+import { Container, Box } from "@mui/system";
 
 const Wrapper = styled.div`
   background-size: cover;
@@ -14,27 +14,22 @@ const Wrapper = styled.div`
   flex-flow: column nowrap;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: #dcc9a4;
+`;
 
-`
-
-const Head = styled.div`
-
-`
+const Head = styled.div``;
 const HTitle = styled.h1`
   font-size: 30px;
   text-align: center;
   padding: 32px 0;
   font-weight: bold;
 
- @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 600px) {
     font-size: 40px;
-
-   }
-   @media only screen and (min-width: 2560px) {
+  }
+  @media only screen and (min-width: 2560px) {
     font-size: 60px;
-
-   }
-`
+  }
+`;
 const Title = styled.h1`
   font-size: 30px;
   text-align: center;
@@ -42,64 +37,53 @@ const Title = styled.h1`
 
   @media only screen and (min-width: 600px) {
     font-size: 40px;
-
-   }
-   @media only screen and (min-width: 2560px) {
+  }
+  @media only screen and (min-width: 2560px) {
     font-size: 60px;
-
-   }
-`
+  }
+`;
 const SubText = styled.p`
   padding-bottom: 20px;
   font-size: 16px;
-  
+
   @media only screen and (min-width: 600px) {
     font-size: 26px;
-
-   }
-   @media only screen and (min-width: 900px) {
+  }
+  @media only screen and (min-width: 900px) {
     font-size: 22px;
     padding: 1rem;
-
-   }
-   @media only screen and (min-width: 2560px) {
+  }
+  @media only screen and (min-width: 2560px) {
     font-size: 40px;
-
-   }
-`
+  }
+`;
 const FormWrapper = styled.form`
   display: flex;
   flex-flow: column nowrap;
   padding-top: 0px;
   background: #dcc9a4;
-  
 
   @media only screen and (min-width: 600px) {
     align-items: center;
     justify-items: center;
-    
-   }
-   @media only screen and (min-width: 900px) {
+  }
+  @media only screen and (min-width: 900px) {
     padding-top: 40px;
-
-    
-   }
-`
+  }
+`;
 const Label = styled.label`
   padding-bottom: 16px;
   font-size: 16px;
   @media only screen and (min-width: 600px) {
     font-size: 26px;
-
-   }
+  }
   @media screen and (min-width: 920px) {
     font-size: 24px;
   }
   @media only screen and (min-width: 2560px) {
     font-size: 40px;
-
-   }
-`
+  }
+`;
 const StringInput = styled.input`
   margin-top: 8px;
   height: 35px;
@@ -123,16 +107,14 @@ const StringInput = styled.input`
   @media only screen and (min-width: 2560px) {
     font-size: 40px;
     height: 100px;
-
-
-   }
-`
+  }
+`;
 const AreaText = styled.textarea`
   font-weight: bold;
   border-radius: 8px;
   margin-top: 8px;
   border: 1px solid #000;
-  width: 100%;  
+  width: 100%;
   padding-left: 4px;
 
   @media screen and (min-width: 600px) {
@@ -144,9 +126,8 @@ const AreaText = styled.textarea`
   @media only screen and (min-width: 2560px) {
     font-size: 40px;
     height: 100px;
-
-   }
-`
+  }
+`;
 const Submit = styled.button`
   width: 40%;
   margin: 20px auto;
@@ -154,19 +135,16 @@ const Submit = styled.button`
   font-size: 24px;
   border: 1px solid #000;
   cursor: pointer;
-  :hover{
-    background-color: #dcc9a4;
-    
+  &:hover {
+    transform: rotate(2deg);
   }
   @media screen and (min-width: 920px) {
     width: 15%;
   }
   @media only screen and (min-width: 2560px) {
     font-size: 40px;
-
-
-   }
-`
+  }
+`;
 
 const Contactya = () => {
   const data = useStaticQuery(graphql`
@@ -185,148 +163,148 @@ const Contactya = () => {
         }
       }
     }
-  `)
+  `);
 
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [telephone, setTelephone] = useState('')
-  const [company, setCompany] = useState('')
-  const [description, setDescription] = useState('')
-  function encode (data) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [company, setCompany] = useState("");
+  const [description, setDescription] = useState("");
+  function encode(data) {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
   }
-  const handleSubmit = event => {
-    event.preventDefault()
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        'form-name': 'contact',
+        "form-name": "contact",
         fname: firstName,
         lname: lastName,
         email: email,
         telephone: telephone,
         description: description,
-        company: company
-
-      })
+        company: company,
+      }),
     })
-      .then(() => navigate('/thankyou'))
-      .catch(error => alert(error))
-  }
+      .then(() => navigate("/thankyou"))
+      .catch((error) => alert(error));
+  };
 
   return (
     <Layout>
       <Container>
-      <Head>
-        <Title>{data.sanityContactya.title}</Title>
-        {data.sanityContactya.text.map(ST => {
-          return ST.children.map(payload => {
-            return <SubText> {payload.text}</SubText>
-          })
-        })}
-        {data.sanityContactya.text2.map(ST => {
-          return ST.children.map(payload => {
-            return <SubText> {payload.text}</SubText>
-          })
-        })}
-      </Head>
-      <Box
-      sx={{ paddingBottom: '40px'}}>
-      <Wrapper>
-        <HTitle>Contact Information</HTitle>
-        <FormWrapper
-          autoComplete='on'
-          netlify-honeypot='bot-field'
-          name='contact'
-          method='POST'
-          data-netlify='true'
-          action='/'
-          onSubmit={handleSubmit}
-        >
-          <input name='form-name' value='Netlify Rocks' type='hidden' />
-          <input type='hidden' name='bot-field' />
-          <Label htmlFor='firstName'>
-            First Name <br />
-            <StringInput
-              required
-              type='text'
-              name='firstName'
-              placeholder='First Name'
-              value={firstName}
-              onChange={e => setFirstName(e.target.value)}
-            ></StringInput>
-          </Label>
-          <Label htmlFor='lastName'>
-            Last Name
-            <br />
-            <StringInput
-              required
-              type='text'
-              name='lastName'
-              placeholder='Last Name'
-              value={lastName}
-              onChange={e => setLastName(e.target.value)}
-            ></StringInput>
-          </Label>
-          <Label htmlFor='Email'>
-            Email
-            <br />
-            <StringInput
-              required
-              type='text'
-              name='email'
-              placeholder='email@email.com'
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-            ></StringInput>
-          </Label>
-          <Label htmlFor='telephone'>
-            Telephone <br />
-            <StringInput
-              required
-              type='tel'
-              name='telephone'
-              pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
-              placeholder='123-456-7890'
-              value={telephone}
-              onChange={e => setTelephone(e.target.value)}
-            ></StringInput>
-          </Label>
-          <Label htmlFor='company'>
-            Company <br />
-            <StringInput
-              required
-              type='company'
-              name='company'
-              placeholder='company'
-              value={company}
-              onChange={e => setCompany(e.target.value)}
-            ></StringInput>
-          </Label>
-          <Label htmlFor='description'>
-            Message <br />
-            <AreaText
-              name='description'
-              rows='4'
-              cols='20'
-              value={description}
-              onChange={e => setDescription(e.target.value)}
-              placeholder='How can we help you!'
-            />
-          </Label>
-          <Submit type='submit' onSubmit={handleSubmit}>
-            Submit
-          </Submit>
-        </FormWrapper>
-      </Wrapper>
-      </Box>
+        <Head>
+          <Title>{data.sanityContactya.title}</Title>
+          {data.sanityContactya.text.map((ST) => {
+            return ST.children.map((payload) => {
+              return <SubText> {payload.text}</SubText>;
+            });
+          })}
+          {data.sanityContactya.text2.map((ST) => {
+            return ST.children.map((payload) => {
+              return <SubText> {payload.text}</SubText>;
+            });
+          })}
+        </Head>
+        <Box sx={{ paddingBottom: "40px" }}>
+          <Wrapper>
+            <HTitle>Contact Information</HTitle>
+            <FormWrapper
+              autoComplete="on"
+              netlify-honeypot="bot-field"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              action="/"
+              onSubmit={handleSubmit}
+            >
+              <input name="form-name" value="Netlify Rocks" type="hidden" />
+              <input type="hidden" name="bot-field" />
+              <Label htmlFor="firstName">
+                First Name <br />
+                <StringInput
+                  required
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                ></StringInput>
+              </Label>
+              <Label htmlFor="lastName">
+                Last Name
+                <br />
+                <StringInput
+                  required
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                ></StringInput>
+              </Label>
+              <Label htmlFor="Email">
+                Email
+                <br />
+                <StringInput
+                  required
+                  type="text"
+                  name="email"
+                  placeholder="email@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                ></StringInput>
+              </Label>
+              <Label htmlFor="telephone">
+                Telephone <br />
+                <StringInput
+                  required
+                  type="tel"
+                  name="telephone"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="123-456-7890"
+                  value={telephone}
+                  onChange={(e) => setTelephone(e.target.value)}
+                ></StringInput>
+              </Label>
+              <Label htmlFor="company">
+                Company <br />
+                <StringInput
+                  required
+                  type="company"
+                  name="company"
+                  placeholder="company"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                ></StringInput>
+              </Label>
+              <Label htmlFor="description">
+                Message <br />
+                <AreaText
+                  name="description"
+                  rows="4"
+                  cols="20"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="How can we help you!"
+                />
+              </Label>
+              <Submit type="submit" onSubmit={handleSubmit}>
+                Submit
+              </Submit>
+            </FormWrapper>
+          </Wrapper>
+        </Box>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default Contactya
+export default Contactya;
