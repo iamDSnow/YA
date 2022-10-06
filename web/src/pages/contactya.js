@@ -12,8 +12,8 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   display: flex;
   flex-flow: column nowrap;
-  border: 1px solid #000;
-  background: gold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #dcc9a4;
 
 
 `
@@ -71,7 +71,7 @@ const FormWrapper = styled.form`
   display: flex;
   flex-flow: column nowrap;
   padding-top: 0px;
-  background: gold;
+  background: #dcc9a4;
   
 
   @media only screen and (min-width: 600px) {
