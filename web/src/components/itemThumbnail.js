@@ -14,7 +14,6 @@ const ItemThumbnailStyled = styled.article`
     justify-content: center;
     margin: 0 20px;
     height: max-content;
-    font-family: var(--bodyFont)
 `
 
 const Heading = styled.h2`
@@ -40,10 +39,13 @@ const LinkStyled = styled(Link)`
 `
 
 const DescStyled = styled.div`
+bottom: 0;
+
+
 `
 
 const ImgStyled = styled(GatsbyImage)`
-    
+
 `
 
 const Price = styled.p`

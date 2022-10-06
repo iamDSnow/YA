@@ -15,6 +15,8 @@ const ThumbnailsWrapper = styled.div`
     grid-gap: 1rem;
     grid-auto-rows: auto auto 500px;
     padding: 20px;
+
+ 
 `
 
 export default function Products ({ data }) {
@@ -48,6 +50,7 @@ export default function Products ({ data }) {
                 image={variants[0].images[0].asset.id}
                 price={variants[0].price}
                 description={blurb.en}
+                
               />
               </Box>
               </Card>

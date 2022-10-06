@@ -6,16 +6,15 @@ import { Link } from "gatsby";
 import { getGatsbyImageData } from "gatsby-source-sanity";
 import steel from "../steel-config";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { Container } from "@mui/system";
 
 const FooterStyled = styled.footer`
-  max-width: 1500px;
   background: #181818;
+  bottom: 0px;
+  position: static;
+  padding-top: 10px;
 
-  color: #fff;
-  & > * {
-    display: block;
-    margin-bottom: 1.2rem;
-  }
+  
 
   
 `
@@ -124,7 +123,6 @@ padding-bottom: 10px;
 
 const End = styled.div`
 text-align: center;
-padding-bottom: 10px;
 font-size: 16px;
 
 @media only screen and (min-width: 2560px) {

@@ -71,13 +71,13 @@ padding-top: 25px;
 
 @media only screen and (min-width: 900px) {
  
-  padding-top: 50px;
+padding-top: 25px;
 
 }
       
 `
 const ImgCon2 = styled.div`
-padding-left: 140px;
+padding-left: 60px;
 padding-top: 56px;
 
 @media only screen and (min-width: 600px) {
@@ -87,9 +87,17 @@ padding-top: 56px;
     }
     @media only screen and (min-width: 900px) {
  
-      padding-left: 120px;
+      padding-left: 80px;
 
    }
+      
+`
+
+const ImgCon3 = styled.div`
+object-fit: cover;
+
+
+   
       
 `
 const ProductPicOne = styled(GatsbyImage)`
@@ -111,7 +119,18 @@ height: auto;
 object-fit: cover;
 
 width: 100%;
-   
+
+
+@media only screen and (min-width: 1800px) {
+ 
+ height: 82vh;
+
+} 
+@media only screen and (min-width: 2560px) {
+ 
+ height: 76vh;
+
+} 
 `
 const Content = styled.div`
 position: relative;
@@ -230,13 +249,14 @@ const ProductFeature = () => {
         >
             <Grid container spacing={2} justify="center">
       <Grid item xs={12} sm={8}>
-      <Paper >
-      
+      <Paper>
+      <ImgCon3>
       <ProductPicFour
       image={shopData.sanityProductCardArray.staticPic.image.asset.gatsbyImageData}
       alt={shopData.sanityProductCardArray.staticPic.altText}
 
       />
+      </ImgCon3>
            </Paper>
                  </Grid>
       <Grid item container direction="column" xs={12} sm={4} spacing={2}>

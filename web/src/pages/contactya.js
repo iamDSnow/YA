@@ -4,26 +4,22 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import { navigate } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Container, Box } from '@mui/system'
 
 const Wrapper = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding-bottom: 10%;
-  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   border: 1px solid #000;
   background: gold;
 
+
 `
 
 const Head = styled.div`
-  padding-top: 20px;
-  @media only screen and (min-width: 900px) {
-    padding-top: 40px;
 
-   }
 `
 const HTitle = styled.h1`
   font-size: 30px;
@@ -43,7 +39,6 @@ const HTitle = styled.h1`
 const Title = styled.h1`
   font-size: 30px;
   text-align: center;
-  padding: 32px 0;
   font-weight: bold;
   @media only screen and (min-width: 600px) {
     font-size: 40px;
@@ -57,6 +52,7 @@ const Title = styled.h1`
 const SubText = styled.p`
   padding-bottom: 20px;
   font-size: 16px;
+  
   @media only screen and (min-width: 600px) {
     font-size: 26px;
 
@@ -74,10 +70,9 @@ const SubText = styled.p`
 const FormWrapper = styled.form`
   display: flex;
   flex-flow: column nowrap;
-  padding: 3rem;
   padding-top: 0px;
-  padding-bottom: 0px;
   background: gold;
+  
 
   @media only screen and (min-width: 600px) {
     align-items: center;
@@ -228,6 +223,7 @@ const Contactya = () => {
 
   return (
     <Layout>
+      <Container>
       <Head>
         <Title>{data.sanityContactya.title}</Title>
         {data.sanityContactya.text.map(ST => {
@@ -241,6 +237,8 @@ const Contactya = () => {
           })
         })}
       </Head>
+      <Box
+      sx={{ paddingBottom: '40px'}}>
       <Wrapper>
         <HTitle>Contact Information</HTitle>
         <FormWrapper
@@ -328,6 +326,8 @@ const Contactya = () => {
           </Submit>
         </FormWrapper>
       </Wrapper>
+      </Box>
+      </Container>
     </Layout>
   )
 }

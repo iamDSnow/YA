@@ -32,6 +32,7 @@ overflow: hidden;
   
   }
 
+
 `
 const Img = styled(GatsbyImage)`
 
@@ -112,9 +113,12 @@ const DualPicText = () => {
   `)
   return (
     <>
-    <Container             sx={{ paddingBottom: '50px'}}
+    <Container             
+    sx={{ paddingBottom: '50px'}}
 >
-      <Box>
+      <Box
+
+      >
       <Img
       image={data.sanityDualpicText.leftPic.image.asset.gatsbyImageData}
       alt={data.sanityDualpicText.leftPic.altText}
