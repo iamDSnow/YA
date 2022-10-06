@@ -72,6 +72,11 @@ export default {
       title: 'Body',
       type: 'localeBlockContent',
       validation: Rule => Rule.required()
+    },
+    {
+      name: 'ingredients',
+      title: 'Ingredients',
+      type: 'localeBlockContent',
     }
   ],
 

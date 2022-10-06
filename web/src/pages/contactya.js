@@ -257,7 +257,7 @@ const Contactya = () => {
             <StringInput
               required
               type='text'
-              name='fNfirstNameame'
+              name='firstName'
               placeholder='First Name'
               value={firstName}
               onChange={e => setFirstName(e.target.value)}

@@ -8,7 +8,14 @@ import { createString, isDigital } from '../utils/utils'
 import Layout from '../components/layout'
 import { siteMetadata } from '../../gatsby-config'
 import steel from '../steel-config'
+import { Container, Box } from '@mui/system'
+import { Typography, Tabs, Tab, Card } from '@mui/material'
+import PropTypes from 'prop-types';
 
+
+
+
+ 
 const Col = styled.div`
 
 
@@ -23,6 +30,7 @@ const ProductGrid = styled.div`
 	align-items: center;
 	width: max-content;
 	margin: 0 auto;
+	padding: 2rem;
 	font-family: var(--bodyFont);
 	& > div {
 		margin: 1rem;
@@ -129,7 +137,50 @@ const BuyButton = styled.button`
 	}
 `;
 
+
+
+function TabPanel(props) {
+	const { children, value, index, ...other } = props;
+  
+	return (
+	  <div
+		role="tabpanel"
+		hidden={value !== index}
+		id={`simple-tabpanel-${index}`}
+		aria-labelledby={`simple-tab-${index}`}
+		{...other}
+	  >
+		{value === index && (
+		  <Box sx={{ p: 2 }}>
+			<Typography>{children}</Typography>
+		  </Box>
+		)}
+	  </div>
+	);
+  }
+  
+  TabPanel.propTypes = {
+	children: PropTypes.node,
+	index: PropTypes.number.isRequired,
+	value: PropTypes.number.isRequired,
+  };
+  
+  function a11yProps(index) {
+	return {
+	  id: `simple-tab-${index}`,
+	  'aria-controls': `simple-tabpanel-${index}`,
+	};
+  }
+
+
 const Product = ({ data: { item }}) => {
+
+	const [value, setValue] = React.useState(0);
+  
+	const handleChange = (event, newValue) => {
+	  setValue(newValue);
+	};
+
 	const variants = item.variants
   const options = variants.map(e => e.title)
 
@@ -148,17 +199,18 @@ const Product = ({ data: { item }}) => {
 				}}
 			/>
 			<Layout>
+				<Container>
 				<ProductGrid>
 					<Col>
-						<Heading>{item.title}</Heading>
 						<ImgCon>
 						<ImgStyled image={imageData} alt={item.title} key={item.id}
 						/>
 						</ImgCon>
 					</Col>
 					<Col>
+					<Heading>{item.title}</Heading>
+
 						<Price>${selected.price}</Price>
-						{item.body.en.map(({children}) => <Description key={children._key}>{children[0].text}</Description>)}
 						<InputWrap>
 							{item.variants.length > 1 && 
 								<Dropdown
@@ -191,6 +243,29 @@ const Product = ({ data: { item }}) => {
 						</InputWrap>
 					</Col>
 				</ProductGrid>
+				<Container>
+				<Box sx={{ width: '100%' }}>
+		<Box
+		//  sx={{ borderBottom: 1, borderColor: 'divider' }}
+		 >
+		  <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+			<Tab label="Description" {...a11yProps(0)} />
+			<Tab label="Ingredients" {...a11yProps(1)} />
+		  </Tabs>
+		</Box>
+		<TabPanel value={value} index={0}>
+		{item.body.en.map(({children}) => <Description key={children._key}>{children[0].text}</Description>)}
+		</TabPanel>
+		<TabPanel value={value} index={1}>
+		{item.ingredients.en.map(({ children }) => (
+                  <Description key={children._key}>
+                    {children[0].text}
+                  </Description>
+			  ))}
+		</TabPanel>
+	  </Box>
+	  </Container>
+	  </Container>
 			</Layout>
 		</>
   )
@@ -210,7 +285,14 @@ export const pageQuery = graphql`
 			title
 			slug {
 				current
-			}
+			}  
+			ingredients {
+        en {
+          children {
+            text
+          }
+        }
+      }
 			blurb {
 				en
 			}
