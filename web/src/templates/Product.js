@@ -257,11 +257,7 @@ const Product = ({ data: { item }}) => {
 		{item.body.en.map(({children}) => <Description key={children._key}>{children[0].text}</Description>)}
 		</TabPanel>
 		<TabPanel value={value} index={1}>
-		{item.ingredients.en.map(({ children }) => (
-                  <Description key={children._key}>
-                    {children[0].text}
-                  </Description>
-			  ))}
+		{item.ingredients.en.map(({ children }) => (<Description key={children._key}>   {children[0].text}</Description> ))}
 		</TabPanel>
 	  </Box>
 	  </Container>
@@ -286,15 +282,17 @@ export const pageQuery = graphql`
 			slug {
 				current
 			}  
-			ingredients {
-        en {
-          children {
-            text
-          }
-        }
-      }
 			blurb {
 				en
+			}
+			ingredients {
+				en {
+					_key
+					children {
+						_key
+						text
+					}
+				}
 			}
 			body {
 				en {
