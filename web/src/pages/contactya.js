@@ -15,7 +15,6 @@ const Wrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: #dcc9a4;
 
-
 `
 
 const Head = styled.div`
@@ -40,6 +39,7 @@ const Title = styled.h1`
   font-size: 30px;
   text-align: center;
   font-weight: bold;
+
   @media only screen and (min-width: 600px) {
     font-size: 40px;
 
@@ -84,16 +84,12 @@ const FormWrapper = styled.form`
 
     
    }
-  
-
 `
 const Label = styled.label`
   padding-bottom: 16px;
   font-size: 16px;
   @media only screen and (min-width: 600px) {
     font-size: 26px;
-    
-
 
    }
   @media screen and (min-width: 920px) {
@@ -138,6 +134,7 @@ const AreaText = styled.textarea`
   border: 1px solid #000;
   width: 100%;  
   padding-left: 4px;
+
   @media screen and (min-width: 600px) {
     width: 65vw;
   }
@@ -147,7 +144,6 @@ const AreaText = styled.textarea`
   @media only screen and (min-width: 2560px) {
     font-size: 40px;
     height: 100px;
-
 
    }
 `
@@ -159,7 +155,8 @@ const Submit = styled.button`
   border: 1px solid #000;
   cursor: pointer;
   :hover{
-    background-color: gold;
+    background-color: #dcc9a4;
+    
   }
   @media screen and (min-width: 920px) {
     width: 15%;
