@@ -1,11 +1,10 @@
-
 module.exports = {
   siteMetadata: {
     title: `yateractives`,
     //must be the url your frontend is deployed to!!!
-    siteUrl: `http://earnest-narwhal-bfc12f.netlify.app`,
+    siteUrl: `https://yateractives.netlify.app/`,
     description: `Yater site`,
-    author: `Snow`
+    author: `Snow`,
   },
   plugins: [
     {
@@ -29,7 +28,7 @@ module.exports = {
         version: `3.0.29`,
         publicApiKey: `MmQyYWY5YjctZTZhNy00OTY5LWE3N2QtMmViYTUzNDVkNTcxNjM3OTk4MzMxNzQxMTk2NDA4
         `,
-      }
+      },
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -46,6 +45,6 @@ module.exports = {
         display: `standalone`,
         icon: `src/media/photos/logo.webp`,
       },
-    }
+    },
   ],
-}
+};
