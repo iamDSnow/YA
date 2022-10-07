@@ -4,6 +4,7 @@ import Header from './header'
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from './navbar'
+import { Helmet } from 'react-helmet'
 
 const PageWrapper = styled.div`
   
