@@ -220,7 +220,7 @@ const Product = ({ data: { item } }) => {
                 )}
                 <BuyButton
                   className="snipcart-add-item"
-                  data-item-id={trueID}
+                  data-item-id={item.slug.current}
                   data-item-price={Number(selected.price)}
                   data-item-name={item.title}
                   data-item-description={item.blurb.en}
