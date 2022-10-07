@@ -1,4 +1,4 @@
 {
-  "baseUrl": "yateractives.netlify.app",
+  "baseUrl": "yateractives.com",
   "integrationFolder": "cypress/e2e"
 }
