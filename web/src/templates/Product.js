@@ -197,9 +197,9 @@ const Product = ({ data: { item } }) => {
               </ImgCon>
             </Col>
             <Col>
-              <Heading>{item.title}</Heading>
+              <Heading className="product-name">{item.title}</Heading>
 
-              <Price>${selected.price}</Price>
+              <Price className="price">${selected.price}</Price>
               <InputWrap>
                 {item.variants.length > 1 && (
                   <Dropdown
@@ -224,7 +224,7 @@ const Product = ({ data: { item } }) => {
                   data-item-name={item.title}
                   data-item-description={item.blurb.en}
                   data-item-image={variants[0].images[0].asset.url}
-                  // data-item-url={`${siteMetadata.siteUrl}/products/${item.slug.current}`}
+                  data-item-url={`${siteMetadata.siteUrl}/products/${item.slug.current}`}
                   data-item-custom1-name={
                     variants.length > 1 ? item.variant_type : ""
                   }

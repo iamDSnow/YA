@@ -19,6 +19,7 @@ const Layout = (props) => {
 
   return (
     <>
+    <Helmet title="Yater Actives" defer={false} />
       <GlobalStyle />
         {/* <Header/> */}
         <Navbar />
