@@ -1,4 +1,3 @@
-import { plugins } from "../../../gatsby-config";
 
 exports.handler = async function (event, context, callback) {
   // Retrieve payment information (depends on how your application is made)
@@ -12,7 +11,7 @@ exports.handler = async function (event, context, callback) {
     'https://payment.snipcart.com/api/private/custom-payment-gateway/payment', {
     method: 'POST',
     headers: {
-      Authorization: plugins[1].options.publicApiKey,
+      Authorization: process.env.STRIPE_KEY,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
