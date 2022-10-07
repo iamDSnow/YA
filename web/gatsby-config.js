@@ -5,6 +5,9 @@ module.exports = {
     siteUrl: `https://yateractives.netlify.app`,
     description: `Yater site`,
     author: `Snow`,
+    proxy: {
+      url: "http://********",
+    },
   },
   plugins: [
     {

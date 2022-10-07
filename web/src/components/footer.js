@@ -12,7 +12,7 @@ const FooterStyled = styled.footer`
   background: #181818;
   bottom: 0px;
   position: static;
-  padding-top: 10px;
+  padding: 10px 0px;
 `;
 const LinkTitle = styled.h3`
   color: #fff;
