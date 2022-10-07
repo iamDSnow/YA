@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `yateractives`,
     //must be the url your frontend is deployed to!!!
-    siteUrl: `https://yateractives.netlify.app`,
+    siteUrl: `https://yateractives.com`,
     description: `Yater site`,
     author: `Snow`,
     proxy: {
@@ -31,6 +31,7 @@ module.exports = {
         version: `3.0.29`,
         publicApiKey: `MmQyYWY5YjctZTZhNy00OTY5LWE3N2QtMmViYTUzNDVkNTcxNjM3OTk4MzMxNzQxMTk2NDA4
         `,
+        loadStrategy: "on-user-interaction",
       },
     },
     `gatsby-plugin-image`,

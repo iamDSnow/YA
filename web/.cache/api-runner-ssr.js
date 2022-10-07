@@ -1,22 +1,22 @@
 var plugins = [{
       name: 'gatsby-source-sanity',
-      plugin: require('/home/alec/Projects/Yater-Actives/web/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      plugin: require('/Users/Supra/Documents/GitHub/YA/web/node_modules/gatsby-source-sanity/gatsby-ssr'),
       options: {"plugins":[],"projectId":"cutpypb3","dataset":"production","token":"","graphqlTag":"default"},
     },{
       name: 'gatsby-plugin-snipcart-advanced',
-      plugin: require('/home/alec/Projects/Yater-Actives/web/node_modules/gatsby-plugin-snipcart-advanced/gatsby-ssr'),
+      plugin: require('/Users/Supra/Documents/GitHub/YA/web/node_modules/gatsby-plugin-snipcart-advanced/gatsby-ssr'),
       options: {"plugins":[],"version":"3.0.29","publicApiKey":"MmQyYWY5YjctZTZhNy00OTY5LWE3N2QtMmViYTUzNDVkNTcxNjM3OTk4MzMxNzQxMTk2NDA4\n        "},
     },{
       name: 'gatsby-plugin-image',
-      plugin: require('/home/alec/Projects/Yater-Actives/web/node_modules/gatsby-plugin-image/gatsby-ssr'),
+      plugin: require('/Users/Supra/Documents/GitHub/YA/web/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-styled-components',
-      plugin: require('/home/alec/Projects/Yater-Actives/web/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/Users/Supra/Documents/GitHub/YA/web/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false,"disableVendorPrefixes":false},
     },{
       name: 'gatsby-plugin-manifest',
-      plugin: require('/home/alec/Projects/Yater-Actives/web/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/Supra/Documents/GitHub/YA/web/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"yateractives","short_name":"ya","start_url":"/","background_color":"bg","theme_color":"white","display":"standalone","icon":"src/media/photos/logo.webp","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"1c46991f572e0abf99e7c7ff8e43079e"},
     }]
 /* global plugins */

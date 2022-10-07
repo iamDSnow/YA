@@ -163,18 +163,19 @@ function a11yProps(index) {
 const Product = ({ data: { item } }) => {
   const [value, setValue] = React.useState(0);
 
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const variants = item.variants;
   const options = variants.map((e) => e.title);
-
+ const trueID = item.id.substring(1)
   const [selected, setSelected] = useState(variants[0]);
 
   const imageData = getGatsbyImageData(
     variants[0].images[0].asset.id,
-    { maxWidth: 600 },
+    { maxWidth: 500 },
     steel.sanity
   );
 
@@ -193,13 +194,13 @@ const Product = ({ data: { item } }) => {
           <ProductGrid>
             <Col>
               <ImgCon>
-                <ImgStyled image={imageData} alt={item.title} key={item.id} />
+                <ImgStyled image={imageData} alt={item.title} key={trueID} />
               </ImgCon>
             </Col>
             <Col>
-              <Heading>{item.title}</Heading>
+              <Heading className="name">{item.title}</Heading>
 
-              <Price>${selected.price}</Price>
+              <Price className="price">${selected.price}</Price>
               <InputWrap>
                 {item.variants.length > 1 && (
                   <Dropdown
@@ -219,8 +220,8 @@ const Product = ({ data: { item } }) => {
                 )}
                 <BuyButton
                   className="snipcart-add-item"
-                  data-item-id={item.id}
-                  data-item-price={selected.price}
+                  data-item-id={item.slug.current}
+                  data-item-price={Number(selected.price)}
                   data-item-name={item.title}
                   data-item-description={item.blurb.en}
                   data-item-image={variants[0].images[0].asset.url}
