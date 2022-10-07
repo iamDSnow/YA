@@ -218,6 +218,7 @@ const Product = ({ data: { item } }) => {
                     ))}
                   </Dropdown>
                 )}
+                
                 <BuyButton
                   className="snipcart-add-item"
                   data-item-id={item.slug.current}
