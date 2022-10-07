@@ -11936,24 +11936,24 @@ function y(){return(y=Object.assign||function(e){for(var t=1;t<arguments.length;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!*****************************************************************************************!*\
-  !*** external "/home/alec/Projects/Yater-Actives/web/node_modules/react-dom/server.js" ***!
-  \*****************************************************************************************/
+/*!****************************************************************************************!*\
+  !*** external "/Users/Supra/Documents/GitHub/YA/web/node_modules/react-dom/server.js" ***!
+  \****************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/alec/Projects/Yater-Actives/web/node_modules/react-dom/server.js");
+module.exports = require("/Users/Supra/Documents/GitHub/YA/web/node_modules/react-dom/server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!************************************************************************************!*\
-  !*** external "/home/alec/Projects/Yater-Actives/web/node_modules/react/index.js" ***!
-  \************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** external "/Users/Supra/Documents/GitHub/YA/web/node_modules/react/index.js" ***!
+  \***********************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/alec/Projects/Yater-Actives/web/node_modules/react/index.js");
+module.exports = require("/Users/Supra/Documents/GitHub/YA/web/node_modules/react/index.js");
 
 /***/ }),
 

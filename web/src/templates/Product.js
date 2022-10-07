@@ -163,13 +163,14 @@ function a11yProps(index) {
 const Product = ({ data: { item } }) => {
   const [value, setValue] = React.useState(0);
 
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const variants = item.variants;
   const options = variants.map((e) => e.title);
-
+ const trueID = item.id.substring(1)
   const [selected, setSelected] = useState(variants[0]);
 
   const imageData = getGatsbyImageData(
@@ -193,11 +194,11 @@ const Product = ({ data: { item } }) => {
           <ProductGrid>
             <Col>
               <ImgCon>
-                <ImgStyled image={imageData} alt={item.title} key={item.id.substring(1)} />
+                <ImgStyled image={imageData} alt={item.title} key={trueID} />
               </ImgCon>
             </Col>
             <Col>
-              <Heading className="product-name">{item.title}</Heading>
+              <Heading className="name">{item.title}</Heading>
 
               <Price className="price">${selected.price}</Price>
               <InputWrap>
@@ -219,7 +220,7 @@ const Product = ({ data: { item } }) => {
                 )}
                 <BuyButton
                   className="snipcart-add-item"
-                  data-item-id={item.id.substring(1)}
+                  data-item-id={trueID}
                   data-item-price={Number(selected.price)}
                   data-item-name={item.title}
                   data-item-description={item.blurb.en}
