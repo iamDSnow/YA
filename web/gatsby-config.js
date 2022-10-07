@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `yateractives`,
     //must be the url your frontend is deployed to!!!
-    siteUrl: `https://yateractives.netlify.app/`,
+    siteUrl: `https://yateractives.netlify.app`,
     description: `Yater site`,
     author: `Snow`,
   },
