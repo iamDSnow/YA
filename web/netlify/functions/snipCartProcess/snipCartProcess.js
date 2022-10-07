@@ -1,29 +1,36 @@
-const fetch = require('node-fetch')
+import { plugins } from "../../../gatsby-config";
 
-const handler = async function () {
-  try {
-    const response = await fetch('https://icanhazdadjoke.com', {
-      headers: { Accept: 'application/json' },
-    })
-    if (!response.ok) {
-      // NOT res.status >= 200 && res.status < 300
-      return { statusCode: response.status, body: response.statusText }
-    }
-    const data = await response.json()
+exports.handler = async function (event, context, callback) {
+  // Retrieve payment information (depends on how your application is made)
+  const requestBody = JSON.parse(event.body);
+  const paymentId = uuid();
+
+  // Process the payment with the gateway of your choice here
+
+  // Confirm payment with the /payment endpoint
+  const response = await fetch(
+    'https://payment.snipcart.com/api/private/custom-payment-gateway/payment', {
+    method: 'POST',
+    headers: {
+      Authorization: plugins[1].options.publicApiKey,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      paymentSessionId: requestBody.paymentSessionId,
+      state: requestBody.state,
+      error: requestBody.error,
+      transactionId: paymentId,
+      instructions: 'Your payment will appear on your statement in the coming days',
+      links: { refunds: `<YOUR_REFUND_URL>?transactionId=${paymentId}` },
+    }),
+  });
+
+  if (response.ok) {
+    const body = await response.json();
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ msg: data.joke }),
-    }
-  } catch (error) {
-    // output to netlify function log
-    console.log(error)
-    return {
-      statusCode: 500,
-      // Could be a custom message or object i.e. JSON.stringify(err)
-      body: JSON.stringify({ msg: error.message }),
-    }
+      body: JSON.stringify({ ok: true, returnUrl: body.returnUrl })
+    };
   }
 }
-
-module.exports = { handler }
