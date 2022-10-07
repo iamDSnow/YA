@@ -193,7 +193,7 @@ const Product = ({ data: { item } }) => {
           <ProductGrid>
             <Col>
               <ImgCon>
-                <ImgStyled image={imageData} alt={item.title} key={item.id} />
+                <ImgStyled image={imageData} alt={item.title} key={item.id.substring(1)} />
               </ImgCon>
             </Col>
             <Col>
@@ -219,7 +219,7 @@ const Product = ({ data: { item } }) => {
                 )}
                 <BuyButton
                   className="snipcart-add-item"
-                  data-item-id={item.id}
+                  data-item-id={item.id.substring(1)}
                   data-item-price={Number(selected.price)}
                   data-item-name={item.title}
                   data-item-description={item.blurb.en}
