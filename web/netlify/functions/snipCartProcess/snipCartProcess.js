@@ -30,6 +30,7 @@ exports.handler = async function (event, context, callback) {
 
   if (response.ok) {
     const body = await response.json();
+  console.log(body)
 
     return {
       statusCode: 200,
