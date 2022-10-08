@@ -223,7 +223,7 @@ const Product = ({ data: { item } }) => {
                   </Dropdown>
                 )}
 
-                <button
+                <BuyButton
                   className="snipcart-add-item"
                   data-item-id={item.slug.current}
                   data-item-price={Number(selected.price)}
@@ -248,7 +248,7 @@ const Product = ({ data: { item } }) => {
                   }
                 >
                   Add to cart
-                </button>
+                </BuyButton>
               </InputWrap>
             </Col>
           </ProductGrid>
