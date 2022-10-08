@@ -6,23 +6,23 @@ exports.handler = async function (event, context, callback) {
 
   // // Process the payment with the gateway of your choice here
 
-  // // Confirm payment with the /payment endpoint
-  // const response = await fetch(
-  //   'https://payment.snipcart.com/api/private/custom-payment-gateway/payment', {
-  //   method: 'POST',
-  //   headers: {
-  //     Authorization: process.env.STRIPE_KEY,
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify({
-  //     paymentSessionId: requestBody.paymentSessionId,
-  //     state: requestBody.state,
-  //     error: requestBody.error,
-  //     transactionId: paymentId,
-  //     instructions: 'Your payment will appear on your statement in the coming days',
-  //     links: { refunds: `<YOUR_REFUND_URL>?transactionId=${paymentId}` },
-  //   }),
-  // });
+  // Confirm payment with the /payment endpoint
+  const response = await fetch(
+    'https://payment.snipcart.com/api/private/custom-payment-gateway/payment', {
+    method: 'POST',
+    headers: {
+      Authorization: process.env.STRIPE_KEY,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      paymentSessionId: requestBody.paymentSessionId,
+      state: requestBody.state,
+      error: requestBody.error,
+      transactionId: paymentId,
+      instructions: 'Your payment will appear on your statement in the coming days',
+      links: { refunds: `<YOUR_REFUND_URL>?transactionId=${paymentId}` },
+    }),
+  });
 
 
   console.log(requestBody)
