@@ -179,6 +179,11 @@ const Product = ({ data: { item } }) => {
   );
 
   const digitalVersion = variants.findIndex(isDigital);
+  const SnipCartJsonRes = {
+    id: item.slug.current,
+    price: Number(selected.price),
+    url: `/products/${item.slug.current}`,
+  };
 
   return (
     <>
@@ -241,6 +246,7 @@ const Product = ({ data: { item } }) => {
                       ? variants[item.variants.indexOf(selected)].grams
                       : 0
                   }
+                  Metadata={SnipCartJsonRes}
                 >
                   Add to cart
                 </BuyButton>
