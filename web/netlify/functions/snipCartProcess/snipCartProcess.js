@@ -1,4 +1,4 @@
-exports.handler = async function (event, context, callback) {
+exports.handler = async function (event, context) {
   // Retrieve payment information (depends on how your application is made)
   const requestBody = JSON.parse(event.body);
 
