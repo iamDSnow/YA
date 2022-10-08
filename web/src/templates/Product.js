@@ -223,7 +223,7 @@ const Product = ({ data: { item } }) => {
                   </Dropdown>
                 )}
 
-                <BuyButton
+                <button
                   className="snipcart-add-item"
                   data-item-id={item.slug.current}
                   data-item-price={Number(selected.price)}
@@ -248,7 +248,7 @@ const Product = ({ data: { item } }) => {
                   }
                 >
                   Add to cart
-                </BuyButton>
+                </button>
               </InputWrap>
             </Col>
           </ProductGrid>
@@ -276,7 +276,6 @@ const Product = ({ data: { item } }) => {
               <TabPanel value={value} index={1}>
                 {item.ingredients.en.map(({ children }) => (
                   <Description key={children._key}>
-                    {" "}
                     {children[0].text}
                   </Description>
                 ))}
