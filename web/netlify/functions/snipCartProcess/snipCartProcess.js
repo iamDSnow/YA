@@ -2,7 +2,7 @@
 exports.handler = async function (event, context, callback) {
   // Retrieve payment information (depends on how your application is made)
   const requestBody = JSON.parse(event.body);
-  const paymentId = uuid();
+  // const paymentId = uuid();
 
   // // Process the payment with the gateway of your choice here
 
