@@ -1,6 +1,6 @@
 module.exports = [{
       plugin: require('../node_modules/gatsby-plugin-snipcart-advanced/gatsby-browser.js'),
-      options: {"plugins":[],"version":"3.0.29","publicApiKey":"MmQyYWY5YjctZTZhNy00OTY5LWE3N2QtMmViYTUzNDVkNTcxNjM3OTk4MzMxNzQxMTk2NDA4\n        "},
+      options: {"plugins":[],"version":"3.0.29","publicApiKey":"MmQyYWY5YjctZTZhNy00OTY5LWE3N2QtMmViYTUzNDVkNTcxNjM3OTk4MzMxNzQxMTk2NDA4","loadStrategy":"on-user-interaction","currency":"usd"},
     },{
       plugin: require('../node_modules/gatsby-plugin-image/gatsby-browser.js'),
       options: {"plugins":[]},
