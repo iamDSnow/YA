@@ -8,6 +8,7 @@ const client = sanityClient({
 });
 
 exports.handler = async function (event, context) {
+  console.log(context);
   const query = `*[_type == "product"]{_id,slug{current},variants[0]{price}}`;
   const products = await client.fetch(query).then((results) => {
     const allProducts = results.map((product) => {
