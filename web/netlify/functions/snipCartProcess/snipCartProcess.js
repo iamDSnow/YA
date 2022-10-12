@@ -1,3 +1,4 @@
+const { PriceChange } = require("@mui/icons-material");
 const sanityClient = require("@sanity/client");
 const client = sanityClient({
   projectId: `cutpypb3`,
@@ -7,16 +8,24 @@ const client = sanityClient({
   useCdn: true, // `false` if you want to ensure fresh data
 });
 
+// const query = `*[_type == "product"]{_id,slug{current},variants[0]{price}}`;
 exports.handler = async function (event, context) {
   console.log(context);
-  const query = `*[_type == "product"]{_id,slug{current},variants[0]{price}}`;
+  const query = `*[_type == "product"]`;
   const products = await client.fetch(query).then((results) => {
     const allProducts = results.map((product) => {
       let productDef = {
         name: product.slug.current,
         id: product.slug.current,
         url: `https://www.yateractives.com/.netlify/functions/snipCartProcess`,
-        price: product.variants.price,
+        variants: product.variants.map((vari) => {
+          variation: vari.map((item) => {
+            {
+              price: item.price;
+              name: item.title;
+            }
+          });
+        }),
       };
       return productDef;
     });
