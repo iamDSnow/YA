@@ -19,8 +19,8 @@ exports.handler = async function (event, context) {
         url: `https://www.yateractives.com/.netlify/functions/snipCartProcess`,
         variants: product.variants.map((vari) => {
           variation: {
-            price: vari.item.price;
-            name: vari.item.title;
+            price: vari.price;
+            name: vari.title;
           }
         }),
       };
