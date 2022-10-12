@@ -38,19 +38,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          "/*": ["Access-Control-Allow-Origin:*"],
-        },
-        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      },
-    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
