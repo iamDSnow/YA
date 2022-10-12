@@ -1,29 +1,40 @@
-const fetch = require('node-fetch')
+const { PriceChange } = require("@mui/icons-material");
+const sanityClient = require("@sanity/client");
+const client = sanityClient({
+  projectId: `cutpypb3`,
+  dataset: `production`,
+  apiVersion: "2021-10-11", // use current UTC date - see "specifying API version"!
+  token: "", // or leave blank for unauthenticated usage
+  useCdn: true, // `false` if you want to ensure fresh data
+});
 
-const handler = async function () {
-  try {
-    const response = await fetch('https://icanhazdadjoke.com', {
-      headers: { Accept: 'application/json' },
-    })
-    if (!response.ok) {
-      // NOT res.status >= 200 && res.status < 300
-      return { statusCode: response.status, body: response.statusText }
-    }
-    const data = await response.json()
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ msg: data.joke }),
-    }
-  } catch (error) {
-    // output to netlify function log
-    console.log(error)
-    return {
-      statusCode: 500,
-      // Could be a custom message or object i.e. JSON.stringify(err)
-      body: JSON.stringify({ msg: error.message }),
-    }
-  }
-}
-
-module.exports = { handler }
+// const query = `*[_type == "product"]{_id,slug{current},variants[0]{price}}`;
+exports.handler = async function (event, context) {
+  console.log(context);
+  const query = `*[_type == "product"]`;
+  const products = await client.fetch(query).then((results) => {
+    const allProducts = results.map((product) => {
+      let productDef = {
+        name: product.slug.current,
+        id: product.slug.current,
+        url: `https://www.yateractives.com/.netlify/functions/snipCartProcess`,
+        variants: product.variants.map((vari) => {
+          variation: vari.map((item) => {
+            {
+              price: item.price;
+              name: item.title;
+            }
+          });
+        }),
+      };
+      return productDef;
+    });
+    console.log(allProducts);
+    return allProducts;
+  });
+  return {
+    statusCode: 200,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(products),
+  };
+};

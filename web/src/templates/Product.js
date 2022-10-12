@@ -219,12 +219,12 @@ const Product = ({ data: { item } }) => {
                 )}
                 <BuyButton
                   className="snipcart-add-item"
-                  data-item-id={item.id}
+                  data-item-id={item.current.slug}
                   data-item-price={selected.price}
                   data-item-name={item.title}
                   data-item-description={item.blurb.en}
                   data-item-image={variants[0].images[0].asset.url}
-                  data-item-url={`${siteMetadata.siteUrl}/products/${item.slug.current}`}
+                  data-item-url="https://www.yateractives.com/.netlify/functions/snipCartProcess"
                   data-item-custom1-name={
                     variants.length > 1 ? item.variant_type : ""
                   }
