@@ -177,7 +177,6 @@ const Product = ({ data: { item } }) => {
     { maxWidth: 500 },
     steel.sanity
   );
-  const realPrice = variants[0];
 
   const digitalVersion = variants.findIndex(isDigital);
   return (
@@ -221,7 +220,7 @@ const Product = ({ data: { item } }) => {
                 <BuyButton
                   className="snipcart-add-item"
                   data-item-id={item.slug.current}
-                  data-item-price={selected.price}
+                  data-item-price={item.variants[0].price}
                   data-item-name={item.slug.current}
                   data-item-description={item.blurb.en}
                   data-item-image={variants[0].images[0].asset.url}
