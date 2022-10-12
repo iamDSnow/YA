@@ -1,5 +1,4 @@
-import fetch from "node-fetch";
-import sanityClient from "@sanity/client";
+const sanityClient = require("@sanity/client");
 const client = sanityClient({
   projectId: `cutpypb3`,
   dataset: `production`,
@@ -7,26 +6,24 @@ const client = sanityClient({
   token: "", // or leave blank for unauthenticated usage
   useCdn: true, // `false` if you want to ensure fresh data
 });
-const query = `*[_type == "product"]{_id,slug{current},variants[0]{price}}`;
 
 exports.handler = async function (event, context) {
-  const body = JSON.parse(event);
-  console.log(body);
-  const json = [];
-  const sanityData = await client.fetch(query).then((result) => {
-    result.forEach((element) => {
+  const query = `*[_type == "product"]{_id,slug{current},variants[0]{price}}`;
+  const products = await client.fetch(query).then((results) => {
+    const allProducts = results.map((product) => {
       let productDef = {
-        id: element._id,
-        url: `https://www.yateractives.com/products/${element.slug.current}`,
-        price: element.variants.price,
+        id: product.slug.current,
+        url: `/.netlify/functions/snipCartProcess`,
+        price: product.variants.price,
       };
-      json.push(productDef);
     });
+    console.log(allProducts);
+    return allProducts;
   });
   return {
     isBase64Encoded: true | false,
     statusCode: 200,
     headers: { "Content-Type": "application/json" },
-    body: json,
+    body: JSON.stringify(products),
   };
 };
