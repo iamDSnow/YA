@@ -221,7 +221,7 @@ const Product = ({ data: { item } }) => {
                   className="snipcart-add-item"
                   data-item-id={item.slug.current}
                   data-item-price={Number(selected.price)}
-                  data-item-name={item.title}
+                  data-item-name={item.slug.current}
                   data-item-description={item.blurb.en}
                   data-item-image={variants[0].images[0].asset.url}
                   data-item-url={`/.netlify/functions/snipCartProcess`}
