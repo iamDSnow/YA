@@ -5,7 +5,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-snipcart-advanced',
       plugin: require('/home/alec/Projects/Yater-Actives/web/node_modules/gatsby-plugin-snipcart-advanced/gatsby-ssr'),
-      options: {"plugins":[],"version":"3.0.29","publicApiKey":"MmQyYWY5YjctZTZhNy00OTY5LWE3N2QtMmViYTUzNDVkNTcxNjM3OTk4MzMxNzQxMTk2NDA4\n        "},
+      options: {"plugins":[],"version":"3.0.29","publicApiKey":"MmQyYWY5YjctZTZhNy00OTY5LWE3N2QtMmViYTUzNDVkNTcxNjM3OTk4MzMxNzQxMTk2NDA4","loadStrategy":"on-user-interaction","currency":"usd"},
     },{
       name: 'gatsby-plugin-image',
       plugin: require('/home/alec/Projects/Yater-Actives/web/node_modules/gatsby-plugin-image/gatsby-ssr'),

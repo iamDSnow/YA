@@ -169,17 +169,17 @@ const Product = ({ data: { item } }) => {
 
   const variants = item.variants;
   const options = variants.map((e) => e.title);
-
+  const trueID = item.id.substring(1);
   const [selected, setSelected] = useState(variants[0]);
 
   const imageData = getGatsbyImageData(
     variants[0].images[0].asset.id,
-    { maxWidth: 600 },
+    { maxWidth: 500 },
     steel.sanity
   );
+  const realPrice = variants[0];
 
   const digitalVersion = variants.findIndex(isDigital);
-
   return (
     <>
       <Helmet
@@ -193,13 +193,13 @@ const Product = ({ data: { item } }) => {
           <ProductGrid>
             <Col>
               <ImgCon>
-                <ImgStyled image={imageData} alt={item.title} key={item.id} />
+                <ImgStyled image={imageData} alt={item.title} key={trueID} />
               </ImgCon>
             </Col>
             <Col>
-              <Heading>{item.title}</Heading>
+              <Heading className="name">{item.title}</Heading>
 
-              <Price>${selected.price}</Price>
+              <Price className="price">{selected.price}</Price>
               <InputWrap>
                 {item.variants.length > 1 && (
                   <Dropdown
@@ -217,14 +217,15 @@ const Product = ({ data: { item } }) => {
                     ))}
                   </Dropdown>
                 )}
+
                 <BuyButton
                   className="snipcart-add-item"
-                  data-item-id={item.current.slug}
+                  data-item-id={item.slug.current}
                   data-item-price={selected.price}
-                  data-item-name={item.title}
+                  data-item-name={item.slug.current}
                   data-item-description={item.blurb.en}
                   data-item-image={variants[0].images[0].asset.url}
-                  data-item-url="https://www.yateractives.com/.netlify/functions/snipCartProcess"
+                  data-item-url={`https://www.yateractives.com/.netlify/functions/snipCartProcess`}
                   data-item-custom1-name={
                     variants.length > 1 ? item.variant_type : ""
                   }
@@ -270,7 +271,6 @@ const Product = ({ data: { item } }) => {
               <TabPanel value={value} index={1}>
                 {item.ingredients.en.map(({ children }) => (
                   <Description key={children._key}>
-                    {" "}
                     {children[0].text}
                   </Description>
                 ))}
