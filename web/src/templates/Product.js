@@ -177,6 +177,7 @@ const Product = ({ data: { item } }) => {
     { maxWidth: 500 },
     steel.sanity
   );
+  const realPrice = variants[0];
 
   const digitalVersion = variants.findIndex(isDigital);
   return (
@@ -219,12 +220,12 @@ const Product = ({ data: { item } }) => {
 
                 <BuyButton
                   className="snipcart-add-item"
-                  data-item-id={item.slug.current}
-                  data-item-price={item.variants[0].price}
+                  data-item-id={item.id}
+                  data-item-price={selected.price}
                   data-item-name={item.slug.current}
                   data-item-description={item.blurb.en}
                   data-item-image={variants[0].images[0].asset.url}
-                  data-item-url={`https://www.yateractives.com/.netlify/functions/snipCartProcess`}
+                  data-item-url={`${siteMetadata.siteUrl}/products/${item.slug.current}`}
                   data-item-custom1-name={
                     variants.length > 1 ? item.variant_type : ""
                   }
@@ -232,9 +233,6 @@ const Product = ({ data: { item } }) => {
                     variants.length > 1 ? createString(variants, selected) : ""
                   }
                   data-item-custom1-value={selected.title}
-                  data-item-file-guid={
-                    digitalVersion !== -1 ? variants[digitalVersion].guid : ""
-                  }
                   data-item-weight={
                     digitalVersion === -1
                       ? variants[item.variants.indexOf(selected)].grams
