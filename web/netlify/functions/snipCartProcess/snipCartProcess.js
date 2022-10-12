@@ -21,7 +21,6 @@ exports.handler = async function (event, context) {
     return allProducts;
   });
   return {
-    isBase64Encoded: true | false,
     statusCode: 200,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(products),
