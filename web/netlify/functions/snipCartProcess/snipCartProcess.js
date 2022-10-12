@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {
     const allProducts = results.map((product) => {
       let productDef = {
         id: product.slug.current,
-        url: `/.netlify/functions/snipCartProcess`,
+        url: `https://www.yateractives.com/.netlify/functions/snipCartProcess`,
         price: product.variants.price,
       };
       return productDef;
