@@ -12,6 +12,7 @@ exports.handler = async function (event, context) {
   const products = await client.fetch(query).then((results) => {
     const allProducts = results.map((product) => {
       let productDef = {
+        name: product.slug.current,
         id: product.slug.current,
         url: `https://www.yateractives.com/.netlify/functions/snipCartProcess`,
         price: product.variants.price,
