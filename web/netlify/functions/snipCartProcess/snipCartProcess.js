@@ -22,6 +22,7 @@ exports.handler = async function (event, context) {
           let variantsObj = {
             options: vari.title,
             name: product.variant_type,
+            type: "dropdown",
           };
           return variantsObj;
         }),
