@@ -18,7 +18,6 @@ exports.handler = async function (event, context) {
         price: product.variants[0].price,
         id: product.slug.current,
         url: `https://www.yateractives.com/.netlify/functions/snipCartProcess`,
-        inventoryManagementMethod: "Variant",
         variants: product.variants.map((vari) => {
           let variantsObj = {
             variation: {
