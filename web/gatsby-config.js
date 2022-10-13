@@ -29,7 +29,7 @@ module.exports = {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
         version: `3.0.29`,
-        publicApiKey: `MmQyYWY5YjctZTZhNy00OTY5LWE3N2QtMmViYTUzNDVkNTcxNjM3OTk4MzMxNzQxMTk2NDA4`,
+        publicApiKey: `NjEzMTU4MTktZmQ3Yy00MjA2LWE0YzktMTk0ZTVhMDAzOGI5NjM3OTk4MzMxNzQxMTk2NDA4`,
         loadStrategy: "on-user-interaction",
         currency: "usd",
       },
