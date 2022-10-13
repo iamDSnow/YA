@@ -233,11 +233,6 @@ const Product = ({ data: { item } }) => {
                     variants.length > 1 ? createString(variants, selected) : ""
                   }
                   data-item-custom1-value={selected.title}
-                  data-item-weight={
-                    digitalVersion === -1
-                      ? variants[item.variants.indexOf(selected)].grams
-                      : 0
-                  }
                 >
                   Add to cart
                 </BuyButton>
