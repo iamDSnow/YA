@@ -18,18 +18,18 @@ exports.handler = async function (event, context) {
         price: product.variants[0].price,
         id: product.slug.current,
         url: `/.netlify/functions/snipCartProcess`,
-        inventoryManagementMethod: "Variant",
-        variants: product.variants.map((vari) => {
-          let variantsObj = {
-            variation: {
-              option: vari.title,
-              name: vari.title,
-            },
-          };
-          return variantsObj;
-        }),
-      };
-      return productDef;
+      //   inventoryManagementMethod: "Variant",
+      //   variants: product.variants.map((vari) => {
+      //     let variantsObj = {
+      //       variation: {
+      //         option: vari.title,
+      //         name: vari.title,
+      //       },
+      //     };
+      //     return variantsObj;
+      //   }),
+      // };
+      // return productDef;
     });
     return allProducts;
   });
