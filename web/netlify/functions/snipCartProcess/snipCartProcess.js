@@ -18,18 +18,22 @@ exports.handler = async function (event, context) {
         price: product.variants[0].price,
         id: product.slug.current,
         url: `https://www.yateractives.com/.netlify/functions/snipCartProcess`,
+        inventoryManagementMethod: "Variant",
         variants: product.variants.map((vari) => {
           let variantsObj = {
-            variation: { price: vari.price, name: vari.title },
+            variation: {
+              option: vari.title,
+              name: vari.title,
+            },
           };
           return variantsObj;
         }),
       };
       return productDef;
     });
-    console.log(allProducts);
     return allProducts;
   });
+  console.log(products);
   return {
     statusCode: 200,
     headers: { "Content-Type": "application/json" },
