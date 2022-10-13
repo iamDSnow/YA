@@ -17,17 +17,14 @@ exports.handler = async function (event, context) {
         name: product.slug.current,
         price: product.variants[0].price,
         id: product.slug.current,
-        url: "https://www.yateractives.com/.netlify/functions/snipCartProcess",
-        // inventoryManagementMethod: "Variant",
-        // variants: product.variants.map((vari) => {
-        //   let variantsObj = {
-        //     variation: {
-        //       option: vari.title,
-        //       name: vari.title,
-        //     },
-        //   };
-        //   return variantsObj;
-        // }),
+        url: `https://www.yateractives.com/.netlify/functions/snipCartProcess`,
+        customFields: product.variants.map((vari) => {
+          let variantsObj = {
+            options: vari.title,
+            name: vari.variant_type,
+          };
+          return variantsObj;
+        }),
       };
       return productDef;
     });
