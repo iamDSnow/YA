@@ -21,7 +21,7 @@ exports.handler = async function (event, context) {
         customFields: product.variants.map((vari) => {
           let variantsObj = {
             options: vari.title,
-            name: vari.variant_type,
+            name: product.variant_type,
           };
           return variantsObj;
         }),
