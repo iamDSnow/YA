@@ -1,0 +1,56 @@
+## Created with gatsby-plugin-netlify
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+  Access-Control-Allow-Origin:*
+/framework-979cf93e4e2ae7c9f6eb.js
+  Cache-Control: public, max-age=31536000, immutable
+/a9a7754c-c5f4156ef87197a041f9.js
+  Cache-Control: public, max-age=31536000, immutable
+/commons-b610bd3fbe12a836ff7e.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-templates-product-js-b48d428c59f13af81899.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-index-js-dd55e2c7717fef68cc08.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-about-inga-js-a7c7215eb7f1bd1dd2a3.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-aboutya-js-9d46a7781ba2c84fab4b.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-contactya-js-3fa7a802c5144fbf9eee.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-products-js-7b616768a45e0691bba0.js
+  Cache-Control: public, max-age=31536000, immutable
+/webpack-runtime-54afd382257c4dde8836.js
+  Cache-Control: public, max-age=31536000, immutable
+/app-49f959bdff245ea61b8b.js
+  Cache-Control: public, max-age=31536000, immutable
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/sw.js
+  Cache-Control: no-cache
+/products/de-puff-eye-mask
+/products/surfer-back-remedy
+/products/nonslip-zinc-cream
+/products/white-yater-actives-t-shirt
+/products/alive-rapid-hair-growth-serum
+/products/black-yater-actives-t-shirt
+/products/black-trucking-hat
+/products/black-sweat-pants
+/products/tan-sweat-pants
+/products/hydraglo-serum
+/accessories
+/sweatshirts
+/product
+/tshirts
+/apparel
+/graphics
+/hats
+/aboutInga/
+/aboutya/
+/contactya/
+/
+/products/
