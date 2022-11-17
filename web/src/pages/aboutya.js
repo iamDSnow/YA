@@ -70,13 +70,11 @@ const AboutHead = styled.div`
 `;
 
 const Card = styled.div`
-  padding-bottom: 20px;
-  padding-top: 20px;
+margin-bottom: 20px;
 `;
 
 const IngredientTitle = styled.div`
-  font-size: 30px;
-  padding-bottom: 30px;
+  font-size: 18px;
   @media only screen and (min-width: 600px) {
     font-size: 40px;
   }
@@ -85,27 +83,19 @@ const IngredientTitle = styled.div`
   }
 `;
 
-const ImgCon = styled.div`
-  padding-left: 850px;
-`;
-
 const IngredientPic = styled(GatsbyImage)`
   height: auto;
   /* width: 600px; */
 `;
 
-const IngredientInfo = styled.p`
-  padding-top: 40px;
-  @media only screen and (min-width: 600px) {
-    font-size: 30px;
-  }
-  @media only screen and (min-width: 900px) {
-    font-size: 24px;
-    padding: 1rem;
-  }
-  @media only screen and (min-width: 2560px) {
-    font-size: 34px;
-  }
+const IngredientInfo = styled.div`
+
+display: none;
+@media only screen and (min-width: 600px) {
+  display: initial;
+}
+
+
 `;
 const Aboutya = () => {
   const data = useStaticQuery(graphql`
@@ -161,7 +151,7 @@ const Aboutya = () => {
               sx={{
                 "@media only screen and (min-width: 390px)": {
                   display: "flex",
-                  flexFlow: "column wrap",
+                  flexFlow: "column nowrap",
                   justifyContent: "center",
                 },
 
@@ -185,32 +175,40 @@ const Aboutya = () => {
                         display: "flex",
                         flexFlow: "column wrap",
                         justifyContent: "center",
-
                         bottom: 0,
                         left: 0,
                         width: "100%",
                         bgcolor: "rgba(0, 0, 0, 0.54)",
                         color: "white",
-                        padding: "10px",
                         height: "100%",
                         textAlign: "center",
+                        paddingBottom: '20px',
                       }}
                     >
-                      <div>
+                      <Card>
                         <IngredientTitle>
                           {cards.ingredientTitle}
                         </IngredientTitle>
-                      </div>
 
                       {cards.ingredientText.map((payload) => {
                         return (
-                          <div>
+                          <IngredientInfo>
                             {payload.children.map((info) => {
-                              return <ListItemText>{info.text}</ListItemText>;
+                              return <ListItemText
+                              sx={{
+                                position: "absolute",
+                                display: "flex",
+                                flexFlow: "column nowrap",
+                                justifyContent: "center",
+        
+                              }}
+                              >{info.text}</ListItemText>;
                             })}
-                          </div>
+                          </IngredientInfo>
                         );
                       })}
+                       </Card>
+
                     </Box>
                   </ImageListItem>
                 );
