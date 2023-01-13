@@ -13,8 +13,26 @@ const Container = styled.div`
 const ImgCon = styled.div`
 
  top: 0;
+
+ 
    `
 
+const Vimeo = styled.iframe`
+
+padding-top: 10px;
+border: none;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+
+@media only screen and (min-width: 600px) {
+  font-size: 32px;
+  width: 640px;
+  height: 340px;
+
+   }
+`
 const IngaImg = styled(GatsbyImage)`
 object-fit: contain;
 `
@@ -141,7 +159,11 @@ const AboutInga = () => {
         })
       )
     })}</Paragraph>
+    <ImgCon>
+     <Vimeo src="https://player.vimeo.com/video/784399665?h=1074b15a79"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></Vimeo>
+     </ImgCon>
     </Content>
+   
     </Box>
     </Container>
     </Layout>
