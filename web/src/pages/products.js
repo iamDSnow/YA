@@ -49,7 +49,7 @@ export default function Products ({ data }) {
                 heading={title}
                 image={variants[0].images[0].asset.id}
                 price={variants[0].price}
-                description={blurb.en}
+                // description={blurb.en}
                 
               />
               </Box>

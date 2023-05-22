@@ -19,6 +19,11 @@ export default {
             type: 'array',
             of: [{ type: 'ingredients' }],
         },
+        {
+            name: 'aboutIn',
+            title: 'aboutIn',
+            type: 'blockContent',
+        },
         
     ],
 }

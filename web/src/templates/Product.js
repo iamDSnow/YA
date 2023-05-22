@@ -199,7 +199,7 @@ const Product = ({ data: { item } }) => {
             <Col>
               <Heading className="name">{item.title}</Heading>
 
-              <Price className="price">{selected.price}</Price>
+              <Price className="price">{'$'+ selected.price}</Price>
               <InputWrap>
                 {item.variants.length > 1 && (
                   <Dropdown
